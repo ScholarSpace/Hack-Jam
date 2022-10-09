@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP-Database</title>
+</head>
+<body>
+    <h1>ScholarSpace Database</h1>
+    <script>
+        //check if indexed db is supported on browser
+        if(self.indexedDB){
+    console.log('IndexedDB is supported');
+}
+    //check if database exists:
+    //var request = self.indexedDB.open('SCHOLAR_DB',1);
+    const sp_db = (function init() {
+    let db = null;
+    let open_dbReq = indexedDB.open('SCHOLAR_DB', 1);
+
+     //onupgradeneeded
+     open_dbReq.onupgradeneeded = function(event) { 
+        console.log('upgrade');
+        // notfiy of database version update:
+        let oldVersion = ev.oldVersion;
+        let newVersion = db.version;
+        console.log('Database upgraded from:',oldVersion,' to', newVersion);
+        //create store:
+        if( !db.objectStoreNames.contains('studentDetails')&&
+            !db.objectStoreNames.contains('jobDetails')&&
+            !db.objectStoreNames.contains('recruiters')&&
+            !db.objectStoreNames.contains('chatMessage')&& 
+            !db.objectStoreNames.contains('security')&&
+            !db.objectStoreNames.contains('reviews')&&
+            !db.objectStoreNames.contains('FieldOfStudy')&&
+            !db.objectStoreNames.contains('profiles')&&
+            !db.objectStoreNames.contains('upskilling')&&
+            !db.objectStoreNames.contains('content')
+
+            )
+        {
+            // student information store:
+            var studentDetails = db.createObjectStore('studentDetails', {keypath: 'studentId'});
+            studentDetails.createIndex('studentId_unique','studentId',{unique: true});//create unique index:
+            //jobs store:
+            var jobDetails = db.createObjectStore('jobDetails', {keypath: 'jobId'});
+            jobDetails.createIndex('jobId_unique','jobId',{unique: true});
+            //recruiters store:
+            var recruiters = db.createObjectStore('recruiters', {keypath: 'recId'});
+            recruiters.createIndex('recId_unique','recId',{unique: true});
+            //chat interface store:
+            var chatMessage = db.createObjectStore('chatMessage', {keypath: 'messageId'});
+           chatMessage.createIndex('messageId_unique','messageId',{unique: true});
+            //security store:
+            var security = db.createObjectStore('security', {keypath: 'securityId'});
+            security.createIndex('securityId_unique','securityId',{unique: true});
+            //reviews store:
+            var reviews = db.createObjectStore('reviews',{keypath: 'recId'})
+            security.createIndex('recId_unique','recId',{unique: true});
+            //fieldOfStudy store:
+            var FieldOfStudy = db.createObjectStore('FieldOfStudy',{keypath: 'jobId'})
+            FieldOfStudy.createIndex('jobId_unique','jobId',{unique: true});
+            //Profiles store:
+            var profiles = db.createObjectStore('profiles',{keypath: 'profileId'})
+            profiles.createIndex('profileId_unique','profileId',{unique: true});
+            //upskilling store:
+            var upskilling = db.createObjectStore('upskilling',{keypath: 'badgeId'})
+            upskilling.createIndex('badgeId_unique','badgeId',{unique: true});
+            //content store:
+            var content = db.createObjectStore('content',{keypath: 'contentId'})
+            content.createIndex('contentId_unique','contentId',{unique: true});
+        }   
+    }   
+  
+     //success:
+     open_dbReq.onsuccess = function(event) {
+        console.log('successs',db);
+       
+        //studentStore:
+        var studentDetails  = [
+        {   id, 
+            name, 
+            surname, 
+            age, 
+            emailAddress, 
+            password,
+            insitution, 
+            qualification,
+            yos, 
+            startDate, 
+            endDate}
+    ];
+ //jobStore:
+    var jobDetails  = [
+        {   jobId,
+            jobTitle,
+            jobType,
+            location,
+            payRate,
+            duration,
+            active,
+            shortlist,
+            hiredStaff}
+    ];
+    //recruitersStore:
+    var recruiters  = [
+        {  recId,
+            verfied,
+            name,
+            surname,
+            password,
+            recruiterType,
+            companyName,
+            emailAddress,
+            socialLinks}
+    ];
+    //chatStore:
+    var chatMessage  = [
+        {  studentId,recId,
+            messageId,isRead,
+            messageUser,
+            messageStudent,
+            timeStamp}
+    ];
+    //securityStore:
+    var security  = [
+        {  studentId,
+            recId,
+            securityLog,
+            password
+            }
+    ];
+        //Reviews:
+        var reviews  = [
+        {  recId,
+            studentId,
+            reviewsComment,
+            rating
+            }
+    ];
+        //field of Study:
+        var FieldOfStudy  = [
+        {  studentId,
+            jobId,
+            Industry,
+            interest
+            }
+    ];
+        //Profiles:
+        var profiles  = [
+        {  profileId,
+            profileType,
+            aboutMe,
+            projectTitle,
+            projectDesc,
+            projectDoc
+            }
+    ];
+        //Upskilling:
+        var upskilling  = [
+        {  badgeId,
+            skillName,
+            category,
+            studentId
+            }
+    ];
+        //content:
+        var content  = [
+        {  contentId,
+            content
+            }
+    ];
+
+         // get database from event
+         var db_ = event.target.result;
+         //create a transaction from the database:
+        var transaction = db_.transaction(['studentDetails','jobDetails',
+                                            'recruiters','chatMessage',
+                                            'security','reviews','FieldOfStudy','Profiles','Upskilling','Conetnt'],'readwrite');
+       
+        //add event handling for success, error and abort:
+        transaction.onsuccess = function(event){
+            console.log('[Transaction] COMPLETED!');
+        }
+        transaction.onerror = function(event){
+            console.log('ERROR OCCURED ON [Transaction]');
+        }
+        transaction.onabort = function(event){
+            console.log('[Transaction] ABORTED!');
+        }
+        //get store from transaction:
+        var studentStore = transaction.objectStore('studentDetails');
+        var jobDetailsStore = transaction.objectStore('jobDetails');
+        var recruitersStore = transaction.objectStore('recruiter');
+        var chatMessageStore = transaction.objectStore('chatMessage');
+        var securityStore = transaction.objectStore('security');
+        var reviewsStore = transaction.objectStore('reviews');
+        var FieldOfStudyStore = transaction.objectStore('fieldOfStudy');
+        var profilesStore = transaction.objectStore('Profiles');
+        var upskillingStore = transaction.objectStore('Upksilling');
+        var contentStore = transaction.objectStore('Content');
+    }   
+    
+    //error event:
+    open_dbReq.onerror = function(event) {
+        console.log('[onerror]', open_dbReq.error);
+    }    
+
+});
+
+
+/*
+SOME CODE:
+
+// put details into the students store 
+studentDetails.forEach(function(stdDetails){
+    var add_request = studentDetailsStore.add(studentDetails);
+
+    add_request.onsuccess = function(event) {
+        console.log(event.target.result == studentDetails.studentId); // true
+    }
+});
+
+// count number of objects in store
+studentStore.count().onsuccess = function(event) {
+    console.log('[Transaction - COUNT] number of students in store', event.target.result);
+};
+
+// get studentDetails with id:
+studentStore.get('ST01').onsuccess = function(event) {
+    console.log('[Transaction - GET] student with id ST01', event.target.result);
+};
+
+ // update studentDetails with id 1
+studentDetails[0].name = 'Musa';
+StudentStore.put(products[0]).onsuccess = function(event) {
+    console.log('[Transaction - PUT] student with id ST01', event.target.result);
+};
+
+// delete student with id 2
+studentStore.delete(2).onsuccess = function(event) {
+    console.log('[Transaction - DELETE] deleted with id 2');
+};
+
+*/
+    </script>
+    
+</body>
+</html>
+
