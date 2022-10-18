@@ -1,0 +1,109 @@
+  <body>
+    <div class="sign-up-student-div" data-animate-on-scroll>
+      <div class="frame-div">
+        <div class="top-section-div">
+          <button class="back-button" id="backButton">
+            <img class="vector-icon1" alt="" src="public/vector1.svg" />
+          </button>
+          <div class="sign-up-div2">Sign Up</div>
+        </div>
+        <div class="sign-up-student-div1">
+          <div class="main-section-div">
+            <div class="change-profile-pic-div">
+              <div class="profile-picture-div">
+                <img
+                  class="ellipse-icon"
+                  alt=""
+                  src="public/ellipse-1@2x.png"
+                />
+              </div>
+              <button class="upload-picture-button">Upload picture</button>
+            </div>
+            <div class="personal-details-div">
+              <div class="content-div">
+                <div class="personal-div">
+                  <input
+                    class="name-input"
+                    type="text"
+                    placeholder="Name"
+                    required
+                    autofocus
+                  /><input
+                    class="name-input1"
+                    type="text"
+                    placeholder="Surname"
+                    required
+                  /><select class="name-select" required>
+                    <option value="Qualification">Qualification</option>
+                  </select>
+                </div>
+                <div class="personal-div">
+                  <input
+                    class="name-input"
+                    type="email"
+                    placeholder="Email Address"
+                    required
+                  /><input
+                    class="name-input"
+                    type="password"
+                    placeholder="Password"
+                  /><input
+                    class="name-input"
+                    type="password"
+                    placeholder="Confirm Password"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-section-div" id="bottomSectionContainer">
+            <button class="button-primary2" id="buttonPrimary">
+              <div class="edit-profile-div">Sign Up</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var backButton = document.getElementById("backButton");
+      if (backButton) {
+        backButton.addEventListener("click", function (e) {
+          window.location.href = "./roles.html";
+        });
+      }
+      
+      var buttonPrimary = document.getElementById("buttonPrimary");
+      if (buttonPrimary) {
+        buttonPrimary.addEventListener("click", function (e) {
+          window.location.href = "./interests.html";
+        });
+      }
+      
+      var bottomSectionContainer = document.getElementById("bottomSectionContainer");
+      if (bottomSectionContainer) {
+        bottomSectionContainer.addEventListener("click", function (e) {
+          window.location.href = "./interests.html";
+        });
+      }
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>

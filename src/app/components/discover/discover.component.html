@@ -1,0 +1,357 @@
+  <body>
+    <div class="discover-div">
+      <div class="discover-layout-div">
+        <div class="options-div2">
+          <div class="search-div">
+            <input
+              class="generic-input-field1"
+              type="search"
+              placeholder="Search Jobs"
+            /><img class="search-icon" alt="" src="public/search.svg" /><button
+              class="filter-button"
+              id="filterButton"
+            >
+              <img class="vector-icon58" alt="" src="public/vector56.svg" />
+            </button>
+          </div>
+          <button class="save-button">
+            <img class="vector-icon59" alt="" src="public/vector57.svg" />
+          </button>
+        </div>
+        <div class="jobs-div1">
+          <div class="title-div29">
+            <div class="avaliable-jobs-div">Avaliable Jobs</div>
+          </div>
+          <div class="job-cards-div">
+            <div class="job-card-div">
+              <div class="main-section-div17">
+                <div class="profile-div">
+                  <div
+                    class="profile-picture-div5"
+                    id="profilePictureContainer"
+                  >
+                    <img
+                      class="ellipse-icon5"
+                      alt=""
+                      src="public/ellipse-14@2x.png"
+                      id="ellipseImage"
+                    />
+                  </div>
+                  <img class="vector-icon60" alt="" src="public/vector58.svg" />
+                </div>
+                <div class="details-div22">
+                  <div class="title-div30">
+                    <div class="technical-writer-needed5">
+                      Technical Writer needed
+                    </div>
+                    <img
+                      class="vector-icon61"
+                      alt=""
+                      src="public/vector59.svg"
+                    />
+                  </div>
+                  <div class="meta-data-div5">
+                    <div class="job-meta-data-div3">
+                      <div class="job-meta-data-item-div9">
+                        <img
+                          class="duration-icon3"
+                          alt=""
+                          src="public/duration3.svg"
+                        />
+                        <div class="avaliable-jobs-div">1—3 months</div>
+                      </div>
+                      <div class="job-meta-data-item-div9">
+                        <img
+                          class="duration-icon3"
+                          alt=""
+                          src="public/vector60.svg"
+                        />
+                        <div class="avaliable-jobs-div">Cape Town</div>
+                      </div>
+                      <div class="job-meta-data-item-div9">
+                        <img
+                          class="duration-icon3"
+                          alt=""
+                          src="public/vector61.svg"
+                        />
+                        <div class="avaliable-jobs-div">60/hr</div>
+                      </div>
+                    </div>
+                    <div class="internship-div">Internship</div>
+                  </div>
+                  <div class="description-div3">
+                    <div class="lorem-ipsum-dolor-sit-amet-co5">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Ut et massa mi. Aliquam in hendrerit urna.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-section-div11">
+                <div class="avaliable-jobs-div">Posted: 1 September 2022</div>
+                <button class="button-primary10" id="buttonPrimary">
+                  <div class="view-details-div">View Details</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-to-top-button">
+        <img class="vector-icon64" alt="" src="public/vector62.svg" />
+      </button>
+    </div>
+
+    <div id="addFiltersModalPopup" class="popup-overlay" style="display: none">
+      <div class="add-filters-modal-div">
+        <div class="add-filters-modal-div1">
+          <div class="title-and-close-div8">
+            <div class="some-title-text1">Add Filters</div>
+            <button class="closebutton1" id="popupclosebutton">
+              <img class="vector-icon18" alt="" src="public/vector2.svg" />
+            </button>
+          </div>
+          <div class="main-section-div8">
+            <div class="location-div3">
+              <div class="some-title-text1">Location</div>
+              <div class="location-div4">
+                <img
+                  class="vector-icon19"
+                  alt=""
+                  src="public/vector19.svg"
+                /><input
+                  class="location-input"
+                  type="text"
+                  placeholder="Location"
+                />
+              </div>
+            </div>
+            <div class="from-div">
+              <div class="some-title-text1">Payrate (/hr)</div>
+              <div class="from-and-to-div">
+                <div class="from-div">
+                  <div class="some-title-text1">From</div>
+                  <input
+                    class="component-input1"
+                    type="number"
+                    min="{2}"
+                    max="{200}"
+                    step="{10}"
+                  />
+                </div>
+                <div class="from-div">
+                  <div class="some-title-text1">To</div>
+                  <input
+                    class="component-input1"
+                    type="number"
+                    min="{2}"
+                    max="{200}"
+                    step="{10}"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="from-div">
+              <div class="some-title-text1">Duration</div>
+              <select class="component-select3">
+                <option value="1">1—3 months</option>
+                <option value="2">3—6 months</option>
+                <option value="3">6+ months</option>
+              </select>
+            </div>
+            <div class="from-div">
+              <div class="some-title-text1">Job Type</div>
+              <select class="component-select3">
+                <option value="1">Internship</option>
+                <option value="2">Part-time</option>
+                <option value="3">Full-time</option>
+                <option value="4">Vacation Work</option>
+              </select>
+            </div>
+          </div>
+          <button class="bottom-section-button" id="popupbottomSectionButton">
+            <div class="button-primary-div">
+              <div class="edit-profile-div3">Apply Filters</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="viewDetailsModalContainer"
+      class="popup-overlay"
+      style="display: none"
+    >
+      <div class="view-details-modal-div">
+        <div class="title-and-close-div9">
+          <div class="job-details-div">Job Details</div>
+          <img
+            class="closebutton-icon"
+            alt=""
+            src="public/closebutton@2x.png"
+            id="popupclosebuttonIcon"
+          />
+        </div>
+        <div class="main-section-div9">
+          <div class="title-div16">
+            <div class="technical-writer-needed2">Technical Writer needed</div>
+          </div>
+          <div class="meta-data-div">
+            <div class="job-meta-data-div">
+              <div class="job-meta-data-item-div">
+                <img class="duration-icon" alt="" src="public/duration.svg" />
+                <div class="job-details-div">1—3 months</div>
+              </div>
+              <div class="job-meta-data-item-div">
+                <img class="duration-icon" alt="" src="public/vector20.svg" />
+                <div class="job-details-div">Cape Town</div>
+              </div>
+              <div class="job-meta-data-item-div">
+                <img class="duration-icon" alt="" src="public/vector21.svg" />
+                <div class="job-details-div">60/hr</div>
+              </div>
+            </div>
+          </div>
+          <div class="description-div">
+            <div class="lorem-ipsum-dolor-sit-amet-co">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna.
+            </div>
+          </div>
+          <div class="posted-1-september-2022">Posted: 1 September 2022</div>
+        </div>
+        <div class="bottom-section-div3">
+          <button class="button-primary3" id="popupbuttonPrimary">
+            <div class="edit-profile-div4">Apply</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var popupclosebutton = document.getElementById("popupclosebutton");
+      if (popupclosebutton) {
+        popupclosebutton.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupbottomSectionButton = document.getElementById(
+        "popupbottomSectionButton"
+      );
+      if (popupbottomSectionButton) {
+        popupbottomSectionButton.addEventListener("click", function () {
+          //TODO: Save filter changes
+        });
+      }
+      
+      var popupclosebuttonIcon = document.getElementById("popupclosebuttonIcon");
+      if (popupclosebuttonIcon) {
+        popupclosebuttonIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupbuttonPrimary = document.getElementById("popupbuttonPrimary");
+      if (popupbuttonPrimary) {
+        popupbuttonPrimary.addEventListener("click", function (e) {
+          window.location.href = "./cover-letter-modal.html";
+        });
+      }
+      
+      var filterButton = document.getElementById("filterButton");
+      if (filterButton) {
+        filterButton.addEventListener("click", function () {
+          var popup = document.getElementById("addFiltersModalPopup");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var ellipseImage = document.getElementById("ellipseImage");
+      if (ellipseImage) {
+        ellipseImage.addEventListener("click", function (e) {
+          window.location.href = "./recruiters-profle.html";
+        });
+      }
+      
+      var profilePictureContainer = document.getElementById(
+        "profilePictureContainer"
+      );
+      if (profilePictureContainer) {
+        profilePictureContainer.addEventListener("click", function (e) {
+          // Please sync "Recruiters-profile-no-edit" to the project
+        });
+      }
+      
+      var buttonPrimary = document.getElementById("buttonPrimary");
+      if (buttonPrimary) {
+        buttonPrimary.addEventListener("click", function () {
+          var popup = document.getElementById("viewDetailsModalContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      </script>
+  </body>

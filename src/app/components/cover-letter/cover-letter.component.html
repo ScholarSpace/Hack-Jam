@@ -1,0 +1,64 @@
+  <body>
+    <div class="cover-letter-modal-div">
+      <div class="cover-letter-modal-div1">
+        <div class="title-and-close-div14">
+          <div class="cover-letter-div">Cover Letter</div>
+          <button class="closebutton2" id="closebutton">
+            <img class="vector-icon80" alt="" src="public/vector77.svg" />
+          </button>
+        </div>
+        <div class="main-section-div19">
+          <div class="details-div24">
+            <div class="details-div25">
+              Write a cover letter for the position. Well written cover letters
+              have a higher chance of acceptance
+            </div>
+            <a class="tip-a" href="./tips-page.html"
+              ><img class="vector-icon81" alt="" src="public/vector78.svg" />
+              <div class="see-our-tips">
+                See our tips for writing a good cover letter
+              </div></a
+            >
+          </div>
+          <div class="cover-letter-text-div">
+            <div class="generic-input-field-div">
+              <textarea
+                class="input-field-textarea"
+                placeholder="Write your cover letter here"
+              ></textarea>
+            </div>
+          </div>
+          <div class="profile-div1">
+            <div class="details-div25">
+              Choose your profile you wish to apply with
+            </div>
+            <select class="dropdown-box-select1">
+              <option value="1">Technical Writing</option>
+            </select>
+          </div>
+        </div>
+        <div class="bottom-section-div12">
+          <button class="submit-button" id="submitButton">
+            <div class="submit-cover-div">Submit</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var closebutton = document.getElementById("closebutton");
+      if (closebutton) {
+        closebutton.addEventListener("click", function (e) {
+          window.location.href = "./discover.html";
+        });
+      }
+      
+      var submitButton = document.getElementById("submitButton");
+      if (submitButton) {
+        submitButton.addEventListener("click", function () {
+          //TODO: Submit cover letter
+        });
+      }
+      </script>
+  </body>
+

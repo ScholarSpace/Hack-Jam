@@ -1,0 +1,77 @@
+  <body>
+    <div class="upskilling-div">
+      <div class="upskilling-scrollable-div">
+        <div class="topics-div">
+          <div class="topics-div1">
+            <div class="topic-bubble-collection-div">
+              <button class="topic-bubble-item-button">
+                <div class="topic-bubble-div">Microsoft Office</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="avaliablecourses-div">
+          <div class="title-div25">Avaliable Courses</div>
+          <div class="courses-div">
+            <div
+              class="course-card-complete-closed-div"
+              id="courseCardCompleteClosedContainer"
+            >
+              <div class="icon-div">
+                <img class="word-366-icon" alt="" src="public/word-366.svg" />
+              </div>
+              <div class="details-div14">
+                <div class="title-div25">Beginner’s course in Word</div>
+                <img class="vector-icon50" alt="" src="public/vector48.svg" />
+              </div>
+            </div>
+            <div
+              class="course-card-complete-closed-div"
+              id="courseCardCompleteOpenContainer"
+            >
+              <div class="icon-div">
+                <img class="word-366-icon" alt="" src="public/word-3661.svg" />
+              </div>
+              <div class="details-div15">
+                <div class="details-div14">
+                  <div class="title-div25">Beginner’s course in Word</div>
+                  <img class="vector-icon50" alt="" src="public/vector48.svg" />
+                </div>
+                <div class="desc-div7">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+                  massa mi. Aliquam in hendrerit urna.
+                </div>
+                <div class="actions-div">
+                  <button class="button-secondary4">
+                    <div class="edit-profile-div16">Review</div></button
+                  ><button class="button-secondary5">
+                    <div class="edit-profile-div16">Take Quiz</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var courseCardCompleteClosedContainer = document.getElementById(
+        "courseCardCompleteClosedContainer"
+      );
+      if (courseCardCompleteClosedContainer) {
+        courseCardCompleteClosedContainer.addEventListener("click", function () {
+          //TODO: Open course card
+        });
+      }
+      
+      var courseCardCompleteOpenContainer = document.getElementById(
+        "courseCardCompleteOpenContainer"
+      );
+      if (courseCardCompleteOpenContainer) {
+        courseCardCompleteOpenContainer.addEventListener("click", function () {
+          //TODO: Close course card
+        });
+      }
+      </script>
+  </body>

@@ -1,0 +1,238 @@
+  <body>
+    <div class="jobs-active-div">
+      <div class="job-scrollable-div">
+        <div class="categories-div">
+          <div class="posted-div" id="postedContainer">
+            <button class="icon-button">
+              <img class="vector-icon44" alt="" src="public/vector42.svg" />
+            </button>
+            <div class="posted-div1">Posted</div>
+          </div>
+          <div class="active-div">
+            <button class="icon-button1">
+              <img class="vector-icon44" alt="" src="public/vector43.svg" />
+            </button>
+            <div class="posted-div1">Active</div>
+          </div>
+          <div class="active-div">
+            <button class="icon-button2" id="iconButton2">
+              <img class="vector-icon44" alt="" src="public/vector44.svg" />
+            </button>
+            <div class="posted-div1">Closed</div>
+          </div>
+        </div>
+        <div class="jobs-div">
+          <div class="title-div23">Active Jobs</div>
+          <div class="recruiter-job-card-div" id="recruiterJobCardContainer">
+            <div class="main-section-div16">
+              <div class="details-div13">
+                <div class="title-div24">
+                  <div class="technical-writer-needed4">
+                    Technical Writer needed
+                  </div>
+                </div>
+                <div class="meta-data-div4">
+                  <div class="job-meta-data-div2">
+                    <div class="job-meta-data-item-div6">
+                      <img
+                        class="duration-icon2"
+                        alt=""
+                        src="public/duration2.svg"
+                      />
+                      <div class="posted-div1">1—3 months</div>
+                    </div>
+                    <div class="job-meta-data-item-div6">
+                      <img
+                        class="duration-icon2"
+                        alt=""
+                        src="public/vector45.svg"
+                      />
+                      <div class="posted-div1">Cape Town</div>
+                    </div>
+                    <div class="job-meta-data-item-div6">
+                      <img
+                        class="duration-icon2"
+                        alt=""
+                        src="public/vector46.svg"
+                      />
+                      <div class="posted-div1">60/hr</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="description-div2">
+                  <div class="title-div23">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    et massa mi. Aliquam in hendrerit urna.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-section-div10">
+              <div class="posted-div1">Posted: 1 September 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="floating-action-up-button" id="floatingActionUpButton">
+        <img class="vector-icon49" alt="" src="public/vector47.svg" />
+      </button>
+    </div>
+
+    <div
+      id="addEditJobPostModalContainer"
+      class="popup-overlay"
+      style="display: none"
+    >
+      <div class="add-edit-job-post-modal-div">
+        <div class="title-and-close-div2">
+          <div class="addedit-job-post">Add/Edit Job Post</div>
+          <button class="closebutton" id="popupclosebutton">
+            <img class="vector-icon8" alt="" src="public/vector2.svg" />
+          </button>
+        </div>
+        <div class="main-section-div2">
+          <div class="component-div">
+            <div class="addedit-job-post">Title</div>
+            <div class="component-div">
+              <input
+                class="generic-input-field"
+                type="text"
+                placeholder="Title"
+              />
+            </div>
+          </div>
+          <div class="component-div">
+            <div class="addedit-job-post">Duration</div>
+            <select class="component-select">
+              <option value="1">1—3 months</option>
+              <option value="2">3—6 months</option>
+              <option value="3">6+ months</option>
+            </select>
+          </div>
+          <div class="component-div">
+            <div class="addedit-job-post">Payrate (/hr)</div>
+            <input class="component-input" type="number" />
+          </div>
+          <div class="component-div">
+            <div class="addedit-job-post">Description</div>
+            <textarea
+              class="generic-input-field-textarea1"
+              placeholder="Enter job description"
+              rows="{6}"
+            ></textarea>
+          </div>
+          <div class="component-div">
+            <div class="addedit-job-post">Industry</div>
+            <select class="component-select1">
+              <option value="1">Information Technology</option>
+            </select>
+          </div>
+          <div class="component-div">
+            <div class="addedit-job-post">Job Type</div>
+            <select class="component-select1">
+              <option value="1">Internship</option>
+            </select>
+          </div>
+        </div>
+        <div class="bottom-section-div2" id="popupbottomSectionContainer">
+          <button class="button-primary2">
+            <div class="edit-profile-div2">Add</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var popupclosebutton = document.getElementById("popupclosebutton");
+      if (popupclosebutton) {
+        popupclosebutton.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupbottomSectionContainer = document.getElementById(
+        "popupbottomSectionContainer"
+      );
+      if (popupbottomSectionContainer) {
+        popupbottomSectionContainer.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var postedContainer = document.getElementById("postedContainer");
+      if (postedContainer) {
+        postedContainer.addEventListener("click", function (e) {
+          // Please sync "Jobs-posted" to the project
+        });
+      }
+      
+      var iconButton2 = document.getElementById("iconButton2");
+      if (iconButton2) {
+        iconButton2.addEventListener("click", function () {
+          //TODO: Load closed jobs
+        });
+      }
+      
+      var recruiterJobCardContainer = document.getElementById(
+        "recruiterJobCardContainer"
+      );
+      if (recruiterJobCardContainer) {
+        recruiterJobCardContainer.addEventListener("click", function (e) {
+          window.location.href = "./view-details-active.html";
+        });
+      }
+      
+      var floatingActionUpButton = document.getElementById("floatingActionUpButton");
+      if (floatingActionUpButton) {
+        floatingActionUpButton.addEventListener("click", function () {
+          var popup = document.getElementById("addEditJobPostModalContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      </script>
+  </body>
+

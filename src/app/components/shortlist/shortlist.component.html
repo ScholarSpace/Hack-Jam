@@ -1,0 +1,49 @@
+  <body>
+    <div class="shortlist-div">
+      <div class="shortlist-div1">
+        <div class="shortlist-scrollable-div">
+          <div class="applicant-div">
+            <div class="profile-card-shortlist-div">
+              <div class="content-div2">
+                <div class="details-div4">
+                  <div class="profile-picture-div3">
+                    <img
+                      class="ellipse-icon3"
+                      alt=""
+                      src="public/ellipse-12@2x.png"
+                    />
+                  </div>
+                  <div class="mary-jane-div">Mary Jane</div>
+                </div>
+                <button class="button-primary8" id="buttonPrimary">
+                  <div class="chat-div">Chat</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-div">
+        <button class="back-button1" id="backButton">
+          <img class="vector-icon36" alt="" src="public/vector35.svg" />
+        </button>
+        <div class="shortlist-div2">Shortlist</div>
+      </div>
+    </div>
+
+    <script>
+      var buttonPrimary = document.getElementById("buttonPrimary");
+      if (buttonPrimary) {
+        buttonPrimary.addEventListener("click", function () {
+          //TODO: Open Chat page
+        });
+      }
+      
+      var backButton = document.getElementById("backButton");
+      if (backButton) {
+        backButton.addEventListener("click", function (e) {
+          window.location.href = "./view-details-active.html";
+        });
+      }
+      </script>
+  </body>

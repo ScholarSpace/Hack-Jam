@@ -1,0 +1,44 @@
+  <body>
+    <div class="security-page-div1">
+      <div class="title-and-close-div28">
+        <div class="security-div1">Security</div>
+        <div class="closebutton-div13">
+          <img
+            class="vector-icon70"
+            alt=""
+            src="public/vector.svg"
+            id="popupvectorIcon"
+          />
+        </div>
+      </div>
+      <div class="main-section-div33">
+        <button class="change-pass-button1">
+          <div class="edit-profile-div22">Change Password</div></button
+        ><button class="delete-account-button1">
+          <div class="edit-profile-div22">Delete Account</div>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      var popupvectorIcon = document.getElementById("popupvectorIcon");
+      if (popupvectorIcon) {
+        popupvectorIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      </script>
+  </body>

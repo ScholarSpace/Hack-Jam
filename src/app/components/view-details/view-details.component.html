@@ -1,0 +1,290 @@
+  <body>
+    <div class="view-details-active-div">
+      <div class="details-div8">
+        <div class="job-desc-div">
+          <div class="details-div9">
+            <div class="title-div21">
+              <div class="technical-writer-needed3">
+                Technical Writer needed
+              </div>
+            </div>
+            <div class="meta-data-and-buttons-div">
+              <div class="meta-data-div3">
+                <div class="job-meta-data-div1">
+                  <div class="job-meta-data-item-div3">
+                    <img
+                      class="duration-icon1"
+                      alt=""
+                      src="public/duration1.svg"
+                    />
+                    <div class="months-div1">1—3 months</div>
+                  </div>
+                  <div class="job-meta-data-item-div3">
+                    <img
+                      class="duration-icon1"
+                      alt=""
+                      src="public/vector39.svg"
+                    />
+                    <div class="months-div1">Cape Town</div>
+                  </div>
+                  <div class="job-meta-data-item-div3">
+                    <img
+                      class="duration-icon1"
+                      alt=""
+                      src="public/vector40.svg"
+                    />
+                    <div class="months-div1">60/hr</div>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons-div">
+                <div class="button-secondary-div1">
+                  <div class="months-div1">Complete Job</div>
+                </div>
+              </div>
+            </div>
+            <div class="description-div1">
+              <div class="lorem-ipsum-dolor-sit-amet-co3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+                massa mi. Aliquam in hendrerit urna.
+              </div>
+              <div class="posted-1-september-20221">
+                Posted: 1 September 2022
+              </div>
+            </div>
+          </div>
+          <div class="applicants-div">
+            <div class="heading-div5">
+              <div class="title-div22">Active Students</div>
+              <button class="button-primary9" id="buttonPrimary">
+                <div class="edit-profile-div15">View Shortlist</div>
+              </button>
+            </div>
+            <div class="applicants-scrollable-div">
+              <div class="applicant-div1">
+                <div
+                  class="profile-card-active-div"
+                  id="profileCardActiveContainer"
+                >
+                  <div class="top-section-div">
+                    <div class="details-div10">
+                      <img
+                        class="profile-picture-icon"
+                        alt=""
+                        src="public/profile-picture@2x.png"
+                        id="profilePictureImage"
+                      />
+                      <div class="months-div1">Mary Jane</div>
+                    </div>
+                  </div>
+                  <div class="bottom-section-div8" id="bottomSectionContainer">
+                    <button class="button-secondary1" id="buttonSecondary">
+                      <div class="view-div">Write a review</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="profile-card-posted-div">
+                  <div class="top-section-div1">
+                    <div class="details-div10">
+                      <img
+                        class="profile-picture-icon1"
+                        alt=""
+                        src="public/profile-picture1@2x.png"
+                      />
+                      <div class="months-div1">Mary Jane</div>
+                    </div>
+                    <div class="points-div1">
+                      <img class="group-icon1" alt="" src="public/group1.svg" />
+                      <div class="months-div1">5</div>
+                    </div>
+                  </div>
+                  <div class="bottom-section-div9">
+                    <button class="button-secondary2">
+                      <div class="view-div">View Proposal</div></button
+                    ><button class="button-secondary1" id="buttonSecondary2">
+                      <div class="view-div">Add to Shortlist</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-div1">
+        <button class="back-button2" id="backButton">
+          <img class="vector-icon43" alt="" src="public/vector35.svg" />
+        </button>
+        <div class="details-div12">Details</div>
+      </div>
+    </div>
+
+    <div id="writeReviewModalPopup" class="popup-overlay" style="display: none">
+      <div class="write-review-modal-div">
+        <div class="write-review-modal-div1">
+          <div class="title-and-close-div1">
+            <div class="some-title-text">Write a Review</div>
+            <div class="closebutton-div1" id="popupclosebuttonContainer">
+              <img class="vector-icon2" alt="" src="public/vector2.svg" />
+            </div>
+          </div>
+          <div class="main-section-div1">
+            <div class="rating-div">
+              <div class="some-title-text">
+                Please indicate your rating for this user
+              </div>
+              <div class="stars-div">
+                <img class="vector-icon3" alt="" src="public/vector3.svg" /><img
+                  class="vector-icon3"
+                  alt=""
+                  src="public/vector3.svg"
+                /><img
+                  class="vector-icon3"
+                  alt=""
+                  src="public/vector3.svg"
+                /><img
+                  class="vector-icon3"
+                  alt=""
+                  src="public/vector6.svg"
+                /><img class="vector-icon3" alt="" src="public/vector6.svg" />
+              </div>
+            </div>
+            <div class="comment-div">
+              <div class="some-title-text">
+                Add a comment for this user (optional)
+              </div>
+              <textarea
+                class="generic-input-field-textarea"
+                rows="{5}"
+              ></textarea>
+            </div>
+          </div>
+          <div class="bottom-section-div1">
+            <button class="button-primary1" id="popupbuttonPrimary">
+              <div class="edit-profile-div1">Done</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var popupclosebuttonContainer = document.getElementById(
+        "popupclosebuttonContainer"
+      );
+      if (popupclosebuttonContainer) {
+        popupclosebuttonContainer.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupbuttonPrimary = document.getElementById("popupbuttonPrimary");
+      if (popupbuttonPrimary) {
+        popupbuttonPrimary.addEventListener("click", function () {
+          //TODO: Add a review for this user
+        });
+      }
+      
+      var buttonPrimary = document.getElementById("buttonPrimary");
+      if (buttonPrimary) {
+        buttonPrimary.addEventListener("click", function (e) {
+          window.location.href = "./shortlist.html";
+        });
+      }
+      
+      var profilePictureImage = document.getElementById("profilePictureImage");
+      if (profilePictureImage) {
+        profilePictureImage.addEventListener("click", function (e) {
+          window.location.href = "./profile-preview.html";
+        });
+      }
+      
+      var buttonSecondary = document.getElementById("buttonSecondary");
+      if (buttonSecondary) {
+        buttonSecondary.addEventListener("click", function () {
+          var popup = document.getElementById("writeReviewModalPopup");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var bottomSectionContainer = document.getElementById("bottomSectionContainer");
+      if (bottomSectionContainer) {
+        bottomSectionContainer.addEventListener("click", function () {
+          var popup = document.getElementById("writeReviewModalPopup");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var profileCardActiveContainer = document.getElementById(
+        "profileCardActiveContainer"
+      );
+      if (profileCardActiveContainer) {
+        profileCardActiveContainer.addEventListener("click", function (e) {
+          window.location.href = "./profile-preview.html";
+        });
+      }
+      
+      var buttonSecondary2 = document.getElementById("buttonSecondary2");
+      if (buttonSecondary2) {
+        buttonSecondary2.addEventListener("click", function (e) {
+          window.location.href = "./shortlist.html";
+        });
+      }
+      
+      var backButton = document.getElementById("backButton");
+      if (backButton) {
+        backButton.addEventListener("click", function (e) {
+          window.location.href = "./jobs-active.html";
+        });
+      }
+      </script>
+  </body>
