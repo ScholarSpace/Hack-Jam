@@ -41,7 +41,7 @@ body {
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  opacity: 0;
+  opacity: 100;
 }
 .button-primary8.animate {
   animation: 2s ease 0s 1 normal forwards fade-in;
@@ -66,7 +66,7 @@ body {
   left: calc(50% - 164.6px);
   width: 336.01px;
   height: 355.72px;
-  opacity: 0;
+  opacity: 100;
 }
 .vector-icon47.animate {
   animation: 1s ease 0s 1 normal forwards slide-in-top;
@@ -86,7 +86,7 @@ body {
   top: 16px;
   left: calc(50% - 62px);
   display: inline-block;
-  opacity: 0;
+  opacity: 100;
 }
 .welcome-to-div.animate {
   animation: 3.5s ease 0s 1 normal forwards slide-in-top;

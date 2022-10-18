@@ -198,7 +198,7 @@
   }
   .button-primary17:active {
     animation: 1s ease 0s infinite normal none shadow-pop-tr;
-    opacity: 1;
+    opacity: 100;
   }
   .bottom-section-div19,
   .sign-up-recruiter-div {
@@ -261,7 +261,7 @@
     position: relative;
     height: 800px;
     overflow: hidden;
-    opacity: 0;
+    opacity: 100;
     text-align: center;
     font-size: var(--font-size-20xl);
     color: var(--color-black);
