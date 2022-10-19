@@ -142,4 +142,9 @@
     --br-4xl: 34px;
     --br-5xl: 39.04px;
     --br-6xl: 42.06px;
-  }  
+  }
+
+  bodyl {
+    padding: 0;
+    margin: 0;
+  }

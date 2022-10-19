@@ -1,0 +1,39 @@
+  <body>
+    <div class="nav-bar-student-div">
+      <a class="upskill-a" routerLink="upskilling"
+        ><img
+          class="upskill-icon"
+          alt=""
+          src="assets/public/upskill.svg"
+          id="upskillIcon" /></a
+      ><a class="upskill-a" routerLink="tips"
+        ><img class="tips-icon" alt="" src="assets/public/tips.svg" /></a
+      ><a class="upskill-a" routerLink="discover"
+        ><img class="discover-icon" alt="" src="assets/public/discover.svg" /></a
+      ><a class="upskill-a" routerLink="chat"
+        ><img class="chat-icon" alt="" src="assets/public/chat.svg" /></a
+      ><a class="upskill-a" routerLink="student-profile"
+        ><img
+          class="profile-icon"
+          alt=""
+          src="assets/public/profile.svg"
+          id="profileIcon"
+      /></a>
+    </div>
+
+    <script>
+      var upskillIcon = document.getElementById("upskillIcon");
+      if (upskillIcon) {
+        upskillIcon.addEventListener("click", function (e) {
+          window.location.href = "./upskilling.html";
+        });
+      }
+      
+      var profileIcon = document.getElementById("profileIcon");
+      if (profileIcon) {
+        profileIcon.addEventListener("click", function (e) {
+          window.location.href = "./student-profile.html";
+        });
+      }
+      </script>
+  </body>

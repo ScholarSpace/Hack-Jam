@@ -1,10 +1,10 @@
   <body>
     <div class="roles-main" data-animate-on-scroll>
       <div class="roles-div">
-        <button class="student-button" id="studentButton">
+        <button class="student-button" id="studentButton" routerLink="/sign-up-student">
           <img class="vector-icon103" alt="" src="public/vector100.svg" />
           <div class="student-div">Student</div></button
-        ><button class="recruiter-button" id="recruiterButton">
+        ><button class="recruiter-button" id="recruiterButton" routerLink="/sign-up-recruiter">
           <img class="vector-icon104" alt="" src="public/vector101.svg" />
           <div class="student-div">Recruiter</div>
         </button>
@@ -12,32 +12,12 @@
       <div class="which-best-decribes-your-role">
         Which best decribes your role?
       </div>
-      <button class="back-button4" id="backButton">
+      <button class="back-button4" id="backButton" routerLink="/welcome">
         <img class="vector-icon105" alt="" src="public/vector32.svg" />
       </button>
     </div>
 
     <script>
-      var studentButton = document.getElementById("studentButton");
-      if (studentButton) {
-        studentButton.addEventListener("click", function (e) {
-          window.location.href = "./sign-up-student.html";
-        });
-      }
-      
-      var recruiterButton = document.getElementById("recruiterButton");
-      if (recruiterButton) {
-        recruiterButton.addEventListener("click", function (e) {
-          window.location.href = "./sign-up-recruiter.html";
-        });
-      }
-      
-      var backButton = document.getElementById("backButton");
-      if (backButton) {
-        backButton.addEventListener("click", function (e) {
-          window.location.href = "/";
-        });
-      }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
       var observer = new IntersectionObserver(
         (entries) => {

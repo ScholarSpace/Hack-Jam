@@ -7,7 +7,7 @@
 /bazel-out
 
 #assests
-/src/assets/public
+#/src/assets/public
 
 # Node
 /node_modules

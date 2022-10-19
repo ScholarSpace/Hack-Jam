@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -23,6 +23,10 @@ import { UpskillingComponent } from './components/upskilling/upskilling.componen
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { CoverLetterComponent } from './components/cover-letter/cover-letter.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { HeaderComponent } from './header/header.component';
+import { NavStudentComponent } from './nav-student/nav-student.component';
+import { NavRecruiterComponent } from './nav-recruiter/nav-recruiter.component';
+import { MainAppComponent } from './main-app/main-app.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,12 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     UpskillingComponent,
     ViewDetailsComponent,
     CoverLetterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    HeaderComponent,
+    NavStudentComponent,
+    NavRecruiterComponent,
+    routingComponents,
+    MainAppComponent
   ],
   imports: [
     BrowserModule,

@@ -37,6 +37,12 @@
     bottom: 0;
     right: 0;
   }
+
+  textarea {
+    font-family: var(--font-hind-madurai);
+    font-size: var(--font-size-2xl);
+  }
+
   .sign-up-div2 {
     position: relative;
     display: inline-block;

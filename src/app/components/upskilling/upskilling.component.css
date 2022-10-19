@@ -191,7 +191,7 @@
   .upskilling-scrollable-div {
     position: absolute;
     width: 100%;
-    top: calc(50% - 350px);
+    top: 0;
     right: 0;
     left: 0;
     overflow-y: auto;

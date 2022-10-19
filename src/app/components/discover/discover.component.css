@@ -275,7 +275,7 @@
   .discover-layout-div {
     position: absolute;
     width: 100%;
-    top: 49px;
+    top: 0;
     right: 0;
     left: 0;
     padding: var(--padding-5xl);

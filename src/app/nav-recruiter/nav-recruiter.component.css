@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  .chat-icon1 {
+    position: relative;
+    width: 23.3px;
+    height: 31.77px;
+    flex-shrink: 0;
+  }
+  .chat1 {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .jobs-icon {
+    position: relative;
+    width: 23.47px;
+    height: 33.1px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .jobs-a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .profile-icon1 {
+    position: relative;
+    width: 20.77px;
+    height: 31.74px;
+    flex-shrink: 0;
+  }
+  .nav-bar-recruiter-div {
+    position: relative;
+    background-color: var(--color-gold-100);
+    box-shadow: 0-4.63995361328125px 19px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-14xs);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+  }
+  

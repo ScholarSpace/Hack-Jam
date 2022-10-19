@@ -2,7 +2,7 @@
     <div class="sign-up-student-div" data-animate-on-scroll>
       <div class="frame-div">
         <div class="top-section-div">
-          <button class="back-button" id="backButton">
+          <button class="back-button" id="backButton" routerLink="/roles">
             <img class="vector-icon1" alt="" src="public/vector1.svg" />
           </button>
           <div class="sign-up-div2">Sign Up</div>
@@ -17,7 +17,7 @@
                   src="public/ellipse-1@2x.png"
                 />
               </div>
-              <button class="upload-picture-button">Upload picture</button>
+              <button class="upload-picture-button" (click)="uploadPicture()">Upload picture</button>
             </div>
             <div class="personal-details-div">
               <div class="content-div">
@@ -57,53 +57,11 @@
             </div>
           </div>
           <div class="bottom-section-div" id="bottomSectionContainer">
-            <button class="button-primary2" id="buttonPrimary">
+            <button class="button-primary2" id="buttonPrimary" (click)="signUpUser()">
               <div class="edit-profile-div">Sign Up</div>
             </button>
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-      var backButton = document.getElementById("backButton");
-      if (backButton) {
-        backButton.addEventListener("click", function (e) {
-          window.location.href = "./roles.html";
-        });
-      }
-      
-      var buttonPrimary = document.getElementById("buttonPrimary");
-      if (buttonPrimary) {
-        buttonPrimary.addEventListener("click", function (e) {
-          window.location.href = "./interests.html";
-        });
-      }
-      
-      var bottomSectionContainer = document.getElementById("bottomSectionContainer");
-      if (bottomSectionContainer) {
-        bottomSectionContainer.addEventListener("click", function (e) {
-          window.location.href = "./interests.html";
-        });
-      }
-      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
-      var observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting || entry.intersectionRatio > 0) {
-              const targetElement = entry.target;
-              targetElement.classList.add("animate");
-              observer.unobserve(targetElement);
-            }
-          }
-        },
-        {
-          threshold: 0.15,
-        }
-      );
-      
-      for (let i = 0; i < scrollAnimElements.length; i++) {
-        observer.observe(scrollAnimElements[i]);
-      }
-      </script>
   </body>

@@ -5,12 +5,14 @@
           class="button-primary8"
           id="buttonPrimary"
           data-animate-on-scroll
+          routerLink="/roles"
         >
           <div class="sign-up-div">Sign Up</div></button
         ><button
           class="button-primary8"
           id="buttonPrimary1"
           data-animate-on-scroll
+          routerLink="/sign-in"
         >
           <div class="sign-up-div">Sign In</div>
         </button>
@@ -30,19 +32,6 @@
     </main>
 
     <script>
-      var buttonPrimary = document.getElementById("buttonPrimary");
-      if (buttonPrimary) {
-        buttonPrimary.addEventListener("click", function (e) {
-          window.location.href = "./Roles.html";
-        });
-      }
-      
-      var buttonPrimary1 = document.getElementById("buttonPrimary1");
-      if (buttonPrimary1) {
-        buttonPrimary1.addEventListener("click", function (e) {
-          window.location.href = "./SignIn.html";
-        });
-      }
       var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
       var observer = new IntersectionObserver(
         (entries) => {

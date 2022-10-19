@@ -1,0 +1,6 @@
+<app-header></app-header>
+    <router-outlet></router-outlet>
+    <div>
+        <app-nav-student *ngIf="type =='student'"></app-nav-student>
+        <app-nav-recruiter *ngIf="type =='recruiter'"></app-nav-recruiter>
+    </div>

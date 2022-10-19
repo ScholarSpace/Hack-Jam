@@ -23,24 +23,8 @@
           </button>
         </div>
       </div>
-      <button class="back-button" id="backButton">
+      <button class="back-button" id="backButton" routerLink="/welcome">
         <img class="vector-icon32" alt="" src="public/vector32.svg" />
       </button>
     </div>
-
-    <script>
-      var buttonPrimary = document.getElementById("buttonPrimary");
-      if (buttonPrimary) {
-        buttonPrimary.addEventListener("click", function () {
-          //TODO: Go to adequate student/recuiter profile page
-        });
-      }
-      
-      var backButton = document.getElementById("backButton");
-      if (backButton) {
-        backButton.addEventListener("click", function (e) {
-          window.location.href = "/";
-        });
-      }
-      </script>
   </body>
