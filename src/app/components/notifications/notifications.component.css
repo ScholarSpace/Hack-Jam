@@ -41,7 +41,11 @@
   }
   .text-div2 {
     position: relative;
+    font-size: var(--font-size-11xl);
     font-weight: 300;
+    font-family: var(--font-hind-siliguri);
+    color: var(--color-black);
+    text-align: left;
     display: inline-block;
     width: 287px;
     flex-shrink: 0;
@@ -58,11 +62,18 @@
     flex: 1;
   }
   .notification-item-div {
-    border-radius: var(--br-md);
-    background-color: var(--color-gray-100);
+    cursor: pointer;
+    border: 0;
     padding: var(--padding-5xl) var(--padding-15xl) var(--padding-5xl)
       var(--padding-5xl);
+    background-color: var(--color-gray-100);
+    align-self: stretch;
+    border-radius: var(--br-md);
+    display: flex;
+    flex-direction: row;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
     gap: var(--gap-4xl);
   }
   .text-div3 {
@@ -147,7 +158,7 @@
   .notifications-scrollable-div {
     position: absolute;
     width: 100%;
-    top: 50px;
+    top: 0;
     right: 0;
     left: 0;
     display: flex;
