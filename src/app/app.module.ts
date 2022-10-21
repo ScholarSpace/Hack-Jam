@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +29,23 @@ import { HeaderComponent } from './header/header.component';
 import { NavStudentComponent } from './nav-student/nav-student.component';
 import { NavRecruiterComponent } from './nav-recruiter/nav-recruiter.component';
 import { MainAppComponent } from './main-app/main-app.component';
+import { EditProfileStudentModalComponent } from './components/modals/edit-profile-student-modal/edit-profile-student-modal.component';
+import { EditProfileRecruiterModalComponent } from './components/modals/edit-profile-recruiter-modal/edit-profile-recruiter-modal.component';
+import { WriteReviewModalComponent } from './components/modals/write-review-modal/write-review-modal.component';
+import { AddFiltersModalComponent } from './components/modals/add-filters-modal/add-filters-modal.component';
+import { AddEditJobPostModalComponent } from './components/modals/add-edit-job-post-modal/add-edit-job-post-modal.component';
+import { ViewDetailsModalComponent } from './components/modals/view-details-modal/view-details-modal.component';
+import { SecurityModalComponent } from './components/modals/security-modal/security-modal.component';
+import { UploadCvModalComponent } from './components/modals/upload-cv-modal/upload-cv-modal.component';
+import { AddEditProjectModalComponent } from './components/modals/add-edit-project-modal/add-edit-project-modal.component';
+import { ChangePassModalComponent } from './components/modals/change-pass-modal/change-pass-modal.component';
+import { ReportIssuesModalComponent } from './components/modals/report-issues-modal/report-issues-modal.component';
+import { DeleteAccountModalComponent } from './components/modals/delete-account-modal/delete-account-modal.component';
+import { SettingsModalComponent } from './components/modals/settings-modal/settings-modal.component';
+import { NotifApprovedModalComponent } from './components/modals/notif-approved-modal/notif-approved-modal.component';
+import { NotifClosedModalComponent } from './components/modals/notif-closed-modal/notif-closed-modal.component';
+import { NotifInterviewModalComponent } from './components/modals/notif-interview-modal/notif-interview-modal.component';
+import { NotifBadgeModalComponent } from './components/modals/notif-badge-modal/notif-badge-modal.component';
 
 @NgModule({
   declarations: [
@@ -53,11 +72,30 @@ import { MainAppComponent } from './main-app/main-app.component';
     NavStudentComponent,
     NavRecruiterComponent,
     routingComponents,
-    MainAppComponent
+    MainAppComponent,
+    EditProfileStudentModalComponent,
+    EditProfileRecruiterModalComponent,
+    WriteReviewModalComponent,
+    AddFiltersModalComponent,
+    AddEditJobPostModalComponent,
+    ViewDetailsModalComponent,
+    SecurityModalComponent,
+    UploadCvModalComponent,
+    AddEditProjectModalComponent,
+    ChangePassModalComponent,
+    ReportIssuesModalComponent,
+    DeleteAccountModalComponent,
+    SettingsModalComponent,
+    NotifApprovedModalComponent,
+    NotifClosedModalComponent,
+    NotifInterviewModalComponent,
+    NotifBadgeModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
@@ -66,6 +104,7 @@ import { MainAppComponent } from './main-app/main-app.component';
     })
   ],
   providers: [],
+  entryComponents: [EditProfileStudentModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
