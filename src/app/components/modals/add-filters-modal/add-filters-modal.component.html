@@ -1,1 +1,75 @@
-<p>add-filters-modal works!</p>
+  <body>
+    <div class="add-filters-modal-div">
+      <div class="add-filters-modal-div1">
+        <div class="title-and-close-div8">
+          <div class="some-title-text1">Add Filters</div>
+          <button class="closebutton1" id="popupclosebutton" [matDialogClose]="true">
+            <img class="vector-icon18" alt="" src="public/vector2.svg" />
+          </button>
+        </div>
+        <div class="main-section-div8">
+          <div class="location-div3">
+            <div class="some-title-text1">Location</div>
+            <div class="location-div4">
+              <img
+                class="vector-icon19"
+                alt=""
+                src="public/vector19.svg"
+              /><input
+                class="location-input"
+                type="text"
+                placeholder="Location"
+              />
+            </div>
+          </div>
+          <div class="from-div">
+            <div class="some-title-text1">Payrate (/hr)</div>
+            <div class="from-and-to-div">
+              <div class="from-div">
+                <div class="some-title-text1">From</div>
+                <input
+                  class="component-input1"
+                  type="number"
+                  min="{2}"
+                  max="{200}"
+                  step="{10}"
+                />
+              </div>
+              <div class="from-div">
+                <div class="some-title-text1">To</div>
+                <input
+                  class="component-input1"
+                  type="number"
+                  min="{2}"
+                  max="{200}"
+                  step="{10}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="from-div">
+            <div class="some-title-text1">Duration</div>
+            <select class="component-select3">
+              <option value="1">1—3 months</option>
+              <option value="2">3—6 months</option>
+              <option value="3">6+ months</option>
+            </select>
+          </div>
+          <div class="from-div">
+            <div class="some-title-text1">Job Type</div>
+            <select class="component-select3">
+              <option value="1">Internship</option>
+              <option value="2">Part-time</option>
+              <option value="3">Full-time</option>
+              <option value="4">Vacation Work</option>
+            </select>
+          </div>
+        </div>
+        <button class="bottom-section-button" id="popupbottomSectionButton">
+          <div class="button-primary-div">
+            <div class="edit-profile-div3">Apply Filters</div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </body>

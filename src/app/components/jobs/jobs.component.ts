@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddEditJobPostModalComponent } from '../modals/add-edit-job-post-modal/add-edit-job-post-modal.component';
 
 @Component({
   selector: 'app-jobs',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openAddEditJobPostModal() {
+    this.dialog.open(AddEditJobPostModalComponent)
   }
 
 }

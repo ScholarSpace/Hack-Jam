@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EditProfileRecruiterModalComponent } from '../modals/edit-profile-recruiter-modal/edit-profile-recruiter-modal.component';
 
 @Component({
   selector: 'app-profile-recruiters',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileRecruitersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openEditProfileModal() {
+    this.dialog.open(EditProfileRecruiterModalComponent);
   }
 
 }

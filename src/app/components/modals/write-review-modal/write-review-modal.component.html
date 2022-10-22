@@ -1,1 +1,44 @@
-<p>write-review-modal works!</p>
+  <body>
+    <div class="write-review-modal-div">
+      <div class="write-review-modal-div1">
+        <div class="title-and-close-div1">
+          <div class="some-title-text">Write a Review</div>
+          <div class="closebutton-div1" id="popupclosebuttonContainer">
+            <img class="vector-icon2" alt="" src="public/vector2.svg" [mat-dialog-close]="true" />
+          </div>
+        </div>
+        <div class="main-section-div1">
+          <div class="rating-div">
+            <div class="some-title-text">
+              Please indicate your rating for this user
+            </div>
+            <div class="stars-div">
+              <img class="vector-icon3" alt="" src="public/vector3.svg" /><img
+                class="vector-icon3"
+                alt=""
+                src="public/vector3.svg"
+              /><img class="vector-icon3" alt="" src="public/vector3.svg" /><img
+                class="vector-icon3"
+                alt=""
+                src="public/vector6.svg"
+              /><img class="vector-icon3" alt="" src="public/vector6.svg" />
+            </div>
+          </div>
+          <div class="comment-div">
+            <div class="some-title-text">
+              Add a comment for this user (optional)
+            </div>
+            <textarea
+              class="generic-input-field-textarea"
+              rows="{5}"
+            ></textarea>
+          </div>
+        </div>
+        <div class="bottom-section-div1">
+          <button class="button-primary1" id="popupbuttonPrimary">
+            <div class="edit-profile-div1">Done</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
