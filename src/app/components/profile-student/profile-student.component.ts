@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AddEditProjectModalComponent } from '../modals/add-edit-project-modal/add-edit-project-modal.component';
 import { EditProfileStudentModalComponent } from '../modals/edit-profile-student-modal/edit-profile-student-modal.component';
+import { SettingsModalComponent } from '../modals/settings-modal/settings-modal.component';
 import { UploadCvModalComponent } from '../modals/upload-cv-modal/upload-cv-modal.component';
 
 @Component({
@@ -23,6 +25,14 @@ export class ProfileStudentComponent implements OnInit {
 
   openUploadCVModal(){
     this.dialog.open(UploadCvModalComponent);
+  }
+
+  openSettingsModal(){
+    this.dialog.open(SettingsModalComponent);
+  }
+
+  openAddEditProjectModal() {
+    this.dialog.open(AddEditProjectModalComponent);
   }
 
 }

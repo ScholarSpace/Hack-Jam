@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="back-button-div">
-        <button class="done-button" id="doneButton">
+        <button class="done-button" id="doneButton" (click)="openProfile()">
           <div class="edit-profile-div27">Done</div>
         </button>
       </div>
@@ -23,25 +23,9 @@
           Please choose your interests (maximum 6)
         </div>
       </div>
-      <button class="back-button3" id="backButton">
+      <button class="back-button3" id="backButton" routerLink="/sign-up-student">
         <img class="vector-icon102" alt="" src="public/vector32.svg" />
       </button>
     </main>
-
-    <script>
-      var doneButton = document.getElementById("doneButton");
-      if (doneButton) {
-        doneButton.addEventListener("click", function (e) {
-          window.location.href = "./student-profile.html";
-        });
-      }
-      
-      var backButton = document.getElementById("backButton");
-      if (backButton) {
-        backButton.addEventListener("click", function (e) {
-          window.location.href = "./sign-up-student.html";
-        });
-      }
-      </script>
   </body>
 

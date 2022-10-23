@@ -3,7 +3,7 @@
       <div class="cover-letter-modal-div1">
         <div class="title-and-close-div14">
           <div class="cover-letter-div">Cover Letter</div>
-          <button class="closebutton2" id="closebutton">
+          <button class="closebutton2" id="closebutton" [mat-dialog-close]="true">
             <img class="vector-icon80" alt="" src="public/vector77.svg" />
           </button>
         </div>
@@ -44,21 +44,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      var closebutton = document.getElementById("closebutton");
-      if (closebutton) {
-        closebutton.addEventListener("click", function (e) {
-          window.location.href = "./discover.html";
-        });
-      }
-      
-      var submitButton = document.getElementById("submitButton");
-      if (submitButton) {
-        submitButton.addEventListener("click", function () {
-          //TODO: Submit cover letter
-        });
-      }
-      </script>
   </body>
 

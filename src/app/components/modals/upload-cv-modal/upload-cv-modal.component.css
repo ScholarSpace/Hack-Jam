@@ -148,8 +148,9 @@
   }
   .upload-cv-modal-div {
     position: fixed;
-    top: 20%;
-    left: calc(50% / 2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1050;
     border-radius: var(--br-md);
     background-color: var(--color-white);

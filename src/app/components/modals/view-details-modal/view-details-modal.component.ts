@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CoverLetterComponent } from '../../cover-letter/cover-letter.component';
 
 @Component({
   selector: 'app-view-details-modal',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewDetailsModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openCoverLetterModal(){
+    this.dialog.open(CoverLetterComponent);
   }
 
 }

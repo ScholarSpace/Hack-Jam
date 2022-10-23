@@ -178,8 +178,9 @@
   }
   .add-edit-job-post-modal-div1 {
     position: fixed;
-    top: calc(5%);
-    left: calc(50% / 2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1050;
     flex-direction: row;
     max-width: 90%;

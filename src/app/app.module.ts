@@ -46,6 +46,7 @@ import { NotifApprovedModalComponent } from './components/modals/notif-approved-
 import { NotifClosedModalComponent } from './components/modals/notif-closed-modal/notif-closed-modal.component';
 import { NotifInterviewModalComponent } from './components/modals/notif-interview-modal/notif-interview-modal.component';
 import { NotifBadgeModalComponent } from './components/modals/notif-badge-modal/notif-badge-modal.component';
+import { NotifDeclinedModalComponent } from './components/modals/notif-declined-modal/notif-declined-modal.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { NotifBadgeModalComponent } from './components/modals/notif-badge-modal/
     NotifApprovedModalComponent,
     NotifClosedModalComponent,
     NotifInterviewModalComponent,
-    NotifBadgeModalComponent
+    NotifBadgeModalComponent,
+    NotifDeclinedModalComponent
   ],
   imports: [
     BrowserModule,

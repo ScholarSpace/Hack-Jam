@@ -123,6 +123,7 @@
   }
   .back-button-div {
     position: absolute;
+    transform: translate(0, -40%);
     bottom: 1px;
     left: calc(50% - 180px);
     flex-direction: column;

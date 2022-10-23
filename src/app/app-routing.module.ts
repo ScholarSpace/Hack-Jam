@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DiscoverComponent } from './components/discover/discover.component';
+import { InterestsComponent } from './components/interests/interests.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { ProfileRecruitersComponent } from './components/profile-recruiters/profile-recruiters.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'sign-up-student', component: SignUpStudentComponent},
   {path: 'main-app/:type/:id', component: MainAppComponent,
     children: [
+      {path: 'interests', component: InterestsComponent},
       {path: 'notifications', component: NotificationsComponent},
       {path: 'student-profile', component: ProfileStudentComponent},
       {path: 'upskilling', component: UpskillingComponent},

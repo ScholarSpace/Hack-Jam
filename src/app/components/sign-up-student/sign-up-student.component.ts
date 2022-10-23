@@ -20,7 +20,7 @@ export class SignUpStudentComponent implements OnInit {
   signUpUser() {
     // Add the user to the database the nagivate to the user's profile
 
-    this.route.navigate(['main-app/student/1/student-profile']);
+    this.route.navigate(['main-app/student/1/interests']);
   }
 
 }
