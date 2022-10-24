@@ -3,9 +3,9 @@
       <div class="upskilling-scrollable-div">
         <div class="topics-div">
           <div class="topics-div1">
-            <div class="topic-bubble-collection-div">
-              <button class="topic-bubble-item-button">
-                <div class="topic-bubble-div">Microsoft Office</div>
+            <div class="topic-bubble-collection-div">              
+              <button class="topic-bubble-item-button" *ngFor="let topic of topics" (click)="setOpenTopic(topic.name)">
+                <div class="topic-bubble-div">{{topic.name}}</div>
               </button>
             </div>
           </div>
@@ -15,36 +15,26 @@
           <div class="courses-div">
             <div
               class="course-card-complete-closed-div"
-              id="courseCardCompleteClosedContainer"
-            >
-              <div class="icon-div">
-                <img class="word-366-icon" alt="" src="public/word-366.svg" />
-              </div>
-              <div class="details-div14">
-                <div class="title-div25">Beginner’s course in Word</div>
-                <img class="vector-icon50" alt="" src="public/vector48.svg" />
-              </div>
-            </div>
-            <div
-              class="course-card-complete-closed-div"
               id="courseCardCompleteOpenContainer"
+              *ngFor="let course of openTopic.courses"
             >
               <div class="icon-div">
                 <img class="word-366-icon" alt="" src="public/word-3661.svg" />
               </div>
               <div class="details-div15">
                 <div class="details-div14">
-                  <div class="title-div25">Beginner’s course in Word</div>
-                  <img class="vector-icon50" alt="" src="public/vector48.svg" />
+                  <div class="title-div25">{{course.name}}</div>
+                  <div *ngIf="course.completed">
+                    <img class="vector-icon50" alt="" src="assets/public/vector48.svg"/>
+                  </div>
                 </div>
                 <div class="desc-div7">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna.
+                  {{course.desc}}
                 </div>
                 <div class="actions-div">
                   <button class="button-secondary4">
                     <div class="edit-profile-div16">Review</div></button
-                  ><button class="button-secondary5">
+                  ><button class="button-secondary5" [class.inactive-button]="course.completed" [disabled]="(course.completed) ? 'disabled': ''">
                     <div class="edit-profile-div16">Take Quiz</div>
                   </button>
                 </div>

@@ -47,13 +47,16 @@
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px;
   }
   .button-secondary4:active,
   .button-secondary5:active,
   .topic-bubble-item-button:active {
     animation: 1s ease 0s infinite normal none shadow-pop-tr;
     opacity: 1;
-  }
+  }  
+
   .topic-bubble-collection-div,
   .topics-div1 {
     display: flex;
@@ -70,8 +73,8 @@
   }
   .topics-div {
     position: relative;
-    width: 350px;
-    height: 31px;
+    width: 100%;
+    height: 35px;
     flex-shrink: 0;
     overflow-x: auto;
   }
@@ -144,6 +147,8 @@
     border-radius: var(--br-4xl);
     box-sizing: border-box;
     justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px
   }
   .actions-div,
   .button-secondary4,
@@ -156,20 +161,28 @@
     cursor: pointer;
     border: 0;
     padding: var(--padding-5xl) 25.999998092651367px;
-    background-color: #7e7e7e;
+    background-color: var(--color-gray-300) ;
     border-radius: var(--br-4xl);
     box-sizing: border-box;
     justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px
   }
+
+  .inactive-button {
+    background-color: #7e7e7e;
+  }
+
   .actions-div {
     align-self: stretch;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   .details-div15 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    width: 100%;
   }
   .courses-div {
     align-self: stretch;
