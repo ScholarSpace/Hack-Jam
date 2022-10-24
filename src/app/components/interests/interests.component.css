@@ -1,0 +1,191 @@
+@keyframes shadow-pop-tr {
+    0% {
+      box-shadow: 0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18);
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      box-shadow: 1px -1px rgba(62, 62, 62, 0.18), 2px -2px rgba(62, 62, 62, 0.18),
+        3px -3px rgba(62, 62, 62, 0.18), 4px -4px rgba(62, 62, 62, 0.18),
+        5px -5px rgba(62, 62, 62, 0.18), 6px -6px rgba(62, 62, 62, 0.18),
+        7px -7px rgba(62, 62, 62, 0.18), 8px -8px rgba(62, 62, 62, 0.18);
+      transform: translateX(-8px) translateY(8px);
+    }
+  }
+  body {
+    margin: 0;
+    line-height: normal;
+  }
+  .popup-overlay {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .field-1-div,
+  .marketing-div {
+    position: relative;
+    display: inline-block;
+  }
+  .field-1-div {
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-hind-madurai);
+    color: var(--color-black);
+    text-align: center;
+  }
+  .interest-bubble-item-button {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-5xl);
+    background-color: var(--color-gray-100);
+    position: absolute;
+    top: 0;
+    left: 134px;
+    border-radius: var(--br-md);
+    width: 61.24px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .fields-div {
+    align-self: stretch;
+    position: relative;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .interest-bubble-div,
+  .interests-div6 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .interest-bubble-div {
+    justify-content: center;
+    gap: 1.68px;
+  }
+  .interests-div6 {
+    flex: 1;
+    padding: 0 0 0 var(--padding-5xl);
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+  .interests-scrollable-div {
+    position: absolute;
+    width: 100%;
+    top: 77px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-5xl);
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .edit-profile-div27 {
+    position: relative;
+    font-size: 29.83px;
+    font-family: var(--font-montserrat);
+    color: var(--color-black);
+    text-align: center;
+    display: inline-block;
+    width: 163.14px;
+    height: 36.36px;
+    flex-shrink: 0;
+  }
+  .back-button-div,
+  .done-button {
+    display: flex;
+    box-sizing: border-box;
+  }
+  .done-button {
+    cursor: pointer;
+    border: 0;
+    padding: 9.322031021118164px;
+    background-color: var(--color-gold-200);
+    border-radius: 31.69px;
+    width: 339px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .done-button:active {
+    animation: 1s ease 0s infinite normal none shadow-pop-tr;
+    opacity: 1;
+  }
+  .back-button-div {
+    position: absolute;
+    transform: translate(0, -40%);
+    bottom: 1px;
+    left: calc(50% - 180px);
+    flex-direction: column;
+    padding: var(--padding-5xl);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .interests-div7 {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 69px);
+    display: inline-block;
+  }
+  .please-choose-your-interests,
+  .top-section-div2 {
+    position: absolute;
+    left: calc(50% - 171px);
+    width: 342px;
+  }
+  .please-choose-your-interests {
+    top: 39px;
+    font-size: var(--font-size-6xl);
+    font-family: var(--font-hind-siliguri);
+    text-align: left;
+    display: inline-block;
+  }
+  .top-section-div2 {
+    top: 11px;
+    height: 66px;
+    text-align: center;
+    font-size: var(--font-size-20xl);
+    font-family: var(--font-montserrat);
+  }
+  .vector-icon102 {
+    position: relative;
+    width: 16px;
+    height: 31px;
+    flex-shrink: 0;
+  }
+  .back-button3 {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-5xl);
+    background-color: transparent;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .interests-main {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 800px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-black);
+    font-family: var(--font-hind-siliguri);
+  }
+  

@@ -1,0 +1,67 @@
+  <body>
+    <div class="upskilling-div">
+      <div class="upskilling-scrollable-div">
+        <div class="topics-div">
+          <div class="topics-div1">
+            <div class="topic-bubble-collection-div">              
+              <button class="topic-bubble-item-button" *ngFor="let topic of topics" (click)="setOpenTopic(topic.name)">
+                <div class="topic-bubble-div">{{topic.name}}</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="avaliablecourses-div">
+          <div class="title-div25">Avaliable Courses</div>
+          <div class="courses-div">
+            <div
+              class="course-card-complete-closed-div"
+              id="courseCardCompleteOpenContainer"
+              *ngFor="let course of openTopic.courses"
+            >
+              <div class="icon-div">
+                <img class="word-366-icon" alt="" src="public/word-3661.svg" />
+              </div>
+              <div class="details-div15">
+                <div class="details-div14">
+                  <div class="title-div25">{{course.name}}</div>
+                  <div *ngIf="course.completed">
+                    <img class="vector-icon50" alt="" src="assets/public/vector48.svg"/>
+                  </div>
+                </div>
+                <div class="desc-div7">
+                  {{course.desc}}
+                </div>
+                <div class="actions-div">
+                  <button class="button-secondary4">
+                    <div class="edit-profile-div16">Review</div></button
+                  ><button class="button-secondary5" [class.inactive-button]="course.completed" [disabled]="(course.completed) ? 'disabled': ''">
+                    <div class="edit-profile-div16">Take Quiz</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var courseCardCompleteClosedContainer = document.getElementById(
+        "courseCardCompleteClosedContainer"
+      );
+      if (courseCardCompleteClosedContainer) {
+        courseCardCompleteClosedContainer.addEventListener("click", function () {
+          //TODO: Open course card
+        });
+      }
+      
+      var courseCardCompleteOpenContainer = document.getElementById(
+        "courseCardCompleteOpenContainer"
+      );
+      if (courseCardCompleteOpenContainer) {
+        courseCardCompleteOpenContainer.addEventListener("click", function () {
+          //TODO: Close course card
+        });
+      }
+      </script>
+  </body>

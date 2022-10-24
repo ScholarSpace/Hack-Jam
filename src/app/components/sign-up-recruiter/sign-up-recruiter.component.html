@@ -1,0 +1,54 @@
+  <body>
+    <main class="sign-up-recruiter-main" data-animate-on-scroll>
+      <div class="frame-div14">
+        <div class="sign-up-div2">Sign Up</div>
+        <div class="sign-up-recruiter-div">
+          <div class="main-section-div33">
+            <div class="upload-pic-div2">
+              <div class="profile-picture-div9">
+                <img
+                  class="ellipse-icon9"
+                  alt=""
+                  src="public/ellipse-22@2x.png"
+                />
+              </div>
+              <button class="upload-picture-button2" (click)="uploadPicture()">Upload picture</button>
+            </div>
+            <div class="personal-details-div8">
+              <div class="content-div5">
+                <input
+                  class="name-input6"
+                  type="text"
+                  placeholder="Company Name"
+                  required
+                /><textarea
+                  class="name-input7"
+                  placeholder="Description"
+                  required></textarea>
+                <div class="location-div15">
+                  <img
+                    class="vector-icon107"
+                    alt=""
+                    src="public/vector104.svg"
+                  /><input
+                    class="location-input1"
+                    type="text"
+                    placeholder="Location"
+                  />
+                </div>
+                <input class="established-div1" placeholder="Year Established">
+              </div>
+            </div>
+          </div>
+          <div class="bottom-section-div19">
+            <button class="button-primary17" id="buttonPrimary" (click)="signUpUser()">
+              <div class="sign-up-div3">Sign Up</div>
+            </button>
+          </div>
+        </div>
+        <button class="back-button5" id="backButton" routerLink="/roles">
+          <img class="vector-icon108" alt="" src="public/vector32.svg" />
+        </button>
+      </div>
+    </main>
+  </body>

@@ -1,0 +1,55 @@
+  <body>
+    <main class="welcome-main">
+      <div class="actions-div">
+        <button
+          class="button-primary8"
+          id="buttonPrimary"
+          data-animate-on-scroll
+          routerLink="/roles"
+        >
+          <div class="sign-up-div">Sign Up</div></button
+        ><button
+          class="button-primary8"
+          id="buttonPrimary1"
+          data-animate-on-scroll
+          routerLink="/sign-in"
+        >
+          <div class="sign-up-div">Sign In</div>
+        </button>
+      </div>
+      <img
+        class="vector-icon47"
+        alt=""
+        src="assets/public/vector103.svg"
+        data-animate-on-scroll
+      /><img
+        class="scholarspace-logo-1-icon"
+        alt=""
+        src="assets/public/scholarspace-logo-1@2x.png"
+        data-animate-on-scroll
+      />
+      <div class="welcome-to-div" data-animate-on-scroll>Welcome To</div>
+    </main>
+
+    <script>
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>

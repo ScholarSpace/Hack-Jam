@@ -1,0 +1,31 @@
+  <body>
+    <div class="header-div">
+      <div class="logo-div">
+        <img
+          class="scholarspace-logo-1-icon1"
+          alt=""
+          src="assets/public/scholarspace-logo-1@2x.png"
+        />
+      </div>
+      <a
+        class="notifications"
+        href="./notifications.html"
+        id="notificationsLink"
+        routerLink="notifications"
+        ><img class="vector-icon1" alt="" src="assets/public/bell.svg" /><img
+          class="ellipse-icon"
+          alt=""
+          src="assets/public/ellipse-2.svg"
+      /></a>
+    </div>
+
+    <script>
+      var notificationsLink = document.getElementById("notificationsLink");
+      if (notificationsLink) {
+        notificationsLink.addEventListener("click", function (e) {
+          window.location.href = "./notifications.html";
+        });
+      }
+      </script>
+  </body>
+

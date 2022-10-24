@@ -1,0 +1,272 @@
+  <body>
+    <div class="student-profile-div">
+      <div class="profile-page-div3">
+        <div class="background-div2">
+          <div class="hexagons-1-div2">
+            <img class="vector-icon65" alt="" />
+          </div>
+        </div>
+        <div class="profile-picture-div6">
+          <img class="ellipse-icon6" alt="" src="assets/public/ellipse-1@2x.png" />
+        </div>
+        <div class="social-media-div3">
+          <div class="points-and-edits1">
+            <div class="points-div2">
+              <img class="group-icon2" alt="" src="public/group2.svg" />
+              <div class="number-div2">5</div>
+              <div></div>
+            </div>
+            <button class="button-secondary6" id="buttonSecondary" (click)="openEditProfileModal()">
+              <div class="edit-profile-div18">Edit Profile</div>
+            </button>
+          </div>
+        </div>
+        <div class="profile-items-div4">
+          <div class="name-div2"><b class="users-name-b2">Mary Jane</b></div>
+          <div class="meta-data-div6">
+            <div class="meta-data-student-div1">
+              <div class="meta-item-1-div1">
+                <img class="vector-icon66" alt="" src="public/vector63.svg" />
+                <div class="eduvos-2021-2023-div1">Eduvos (2021-2023)</div>
+              </div>
+              <div class="meta-item-2-div1">
+                <img class="vector-icon66" alt="" src="public/vector64.svg" />
+                <div class="number-div2">Business Management</div>
+              </div>
+              <div class="meta-item-1-div1">
+                <img class="vector-icon68" alt="" src="public/vector65.svg" />
+                <div class="johannesburg-div2">Johannesburg</div>
+              </div>
+            </div>
+          </div>
+          <div class="line-divider2"><div class="line-divider-12"></div></div>
+          <div class="about-me-div4">
+            <div class="about-me-box-div4">
+              <div class="about-me-box-div5">
+                <div class="frame-div9" data-animate-on-scroll>
+                  <div class="number-div2">About me</div>
+                  <button class="edit-1-button">
+                    <img
+                      class="vector-icon69"
+                      alt=""
+                      src="public/vector66.svg"
+                    /><img
+                      class="vector-icon70"
+                      alt=""
+                      src="public/vector67.svg"
+                    />
+                  </button>
+                </div>
+                <textarea
+                  class="desc-textarea1"
+                  placeholder="Say something about yourself"
+                  rows="{5}"
+                ></textarea>
+              </div>
+            </div>
+            <div class="interests-div3">
+              <div class="interests-component-div1">
+                <div class="interests-div4">
+                  <div class="number-div2">Interests</div>
+                  <button class="edit-1-button1" id="edit1Button1">
+                    <img
+                      class="vector-icon69"
+                      alt=""
+                      src="public/vector68.svg"
+                    /><img
+                      class="vector-icon70"
+                      alt=""
+                      src="public/vector69.svg"
+                    />
+                  </button>
+                </div>
+                <div class="interest-bubbles-div1">
+                  <div class="interests-bubble-div4">
+                    <div class="technical-writing-div6">Technical writing</div>
+                  </div>
+                  <div class="interests-bubble-div4">
+                    <div class="technical-writing-div6">JavaScript</div>
+                  </div>
+                  <div class="interests-bubble-div4">
+                    <div class="technical-writing-div6">Web development</div>
+                  </div>
+                  <div class="interests-bubble-div4">
+                    <div class="technical-writing-div6">Python</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-cv-div4">
+            <button class="my-cv-box-button" id="myCvBoxButton" (click)="openUploadCVModal()">
+              <div class="my-cv-div5">My CV</div>
+              <img
+                class="forward-1-icon"
+                alt=""
+                src="public/forward-1.svg"
+                id="forward1Icon"
+              />
+            </button>
+          </div>
+          <div class="profile-box-div2">
+            <div class="profile-box-div3">
+              <div class="frame-div10">
+                <div class="title-div31">
+                  <div class="frame-div11">
+                    <input
+                      class="title-input"
+                      type="text"
+                      placeholder="General"
+                    /><button class="frame-button">
+                      <img
+                        class="vector-icon73"
+                        alt=""
+                        src="public/vector70.svg"
+                      />
+                    </button>
+                    <div class="frame-div12">
+                      <img
+                        class="vector-icon74"
+                        alt=""
+                        src="public/vector71.svg"
+                      />
+                    </div>
+                  </div>
+                  <select class="dropdown-box-select">
+                    <option value="Technical Writing">Technical Writing</option>
+                    <option value="General">General</option>
+                  </select>
+                </div>
+                <input
+                  class="desc-input"
+                  type="text"
+                  placeholder="Your profile description goes here"
+                />
+                <div class="project-collection-div2">
+                  <div class="projects-box-div1">
+                    <div class="title-div32">
+                      <div class="number-div2">Projects</div>
+                      <button class="frame-button1" id="frameButton1" (click)="openAddEditProjectModal()">
+                        <img
+                          class="vector-icon75"
+                          alt=""
+                          src="public/vector72.svg"
+                        />
+                      </button>
+                    </div>
+                    <div class="project-collection-div3">
+                      <div class="project-card-div4">
+                        <div class="project-card-div5">
+                          <div class="frame-div13">
+                            <div class="project-name-and-options-div2">
+                              <div class="project-name-div2">
+                                <div class="number-div2">
+                                  Blog Writing Project
+                                </div>
+                              </div>
+                              <div class="project-options-div2">
+                                <button class="edit-3-button" id="edit3Button" (click)="openAddEditProjectModal()">
+                                  <img
+                                    class="vector-icon69"
+                                    alt=""
+                                    src="assets/public/vector73.svg"
+                                  /><img
+                                    class="vector-icon70"
+                                    alt=""
+                                    src="public/vector74.svg"
+                                  /></button
+                                ><button class="close-1-button">
+                                  <img
+                                    class="vector-icon78"
+                                    alt=""
+                                    src="public/vector75.svg"
+                                  />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ratings-and-badges-div2">
+            <div class="ratings-div6">
+              <div class="ratings-box-div2">
+                <div class="heading-div6">
+                  <div class="users-name-b2">Ratings</div>
+                </div>
+                <div class="ratings-div8">
+                  <div class="rating-div7">
+                    <div class="project-options-div2">
+                      <img
+                        class="star-1-icon6"
+                        alt=""
+                        src="public/star-16.svg"
+                      /><img
+                        class="star-1-icon6"
+                        alt=""
+                        src="public/star-36.svg"
+                      /><img
+                        class="star-1-icon6"
+                        alt=""
+                        src="public/star-46.svg"
+                      /><img
+                        class="star-1-icon6"
+                        alt=""
+                        src="public/star-56.svg"
+                      /><img
+                        class="star-1-icon6"
+                        alt=""
+                        src="public/star-26.svg"
+                      />
+                    </div>
+                    <div class="rater-div6">
+                      <div class="googlecom-div6">—Google.com</div>
+                    </div>
+                    <div class="comment-div7">
+                      <div class="users-name-b2">
+                        Lorem ipsum dolor sit amet consectetur.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="badges-div3">
+              <div class="badges-box-div1">
+                <div class="heading-div7">
+                  <div class="number-div2">Badges</div>
+                </div>
+                <div class="badges-div5">
+                  <div class="badge-container-div3">
+                    <img
+                      class="badge-1-icon3"
+                      alt=""
+                      src="public/badge-13.svg"
+                    />
+                    <div class="details-div23">
+                      <div class="word-365-div3">Word 365</div>
+                      <div class="scholarspace-div3">ScholarSpace</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="settings-button1" (click)="openSettingsModal()">
+          <img
+            class="settings-icon1"
+            alt=""
+            src="public/settings.svg"
+            id="settingsIcon"
+          />
+        </button>
+      </div>
+    </div>
+  </body>
+

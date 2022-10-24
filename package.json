@@ -1,0 +1,25 @@
+{
+    "name": "scholarspace",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "parcel ./*.html",
+        "build": "parcel build ./*.html --dist-dir ./build"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@angular-devkit/build-angular": "^14.2.6",
+        "@angular/service-worker": "^14.2.7",
+        "parcel": "^2.7.0"
+    },
+    "dependencies": {
+        "@angular/animations": "^14.2.7",
+        "@angular/core": "^14.2.7",
+        "@angular/material": "^14.2.5",
+        "@angular/platform-browser": "^14.2.7",
+        "@angular/platform-browser-dynamic": "^14.2.7",
+        "@angular/router": "^14.2.7",
+        "http-server": "^14.1.1"
+    }
+}

@@ -1,0 +1,172 @@
+@keyframes shadow-pop-tr {
+    0% {
+      box-shadow: 0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+        0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18);
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      box-shadow: 1px -1px rgba(62, 62, 62, 0.18), 2px -2px rgba(62, 62, 62, 0.18),
+        3px -3px rgba(62, 62, 62, 0.18), 4px -4px rgba(62, 62, 62, 0.18),
+        5px -5px rgba(62, 62, 62, 0.18), 6px -6px rgba(62, 62, 62, 0.18),
+        7px -7px rgba(62, 62, 62, 0.18), 8px -8px rgba(62, 62, 62, 0.18);
+      transform: translateX(-8px) translateY(8px);
+    }
+  }
+  body {
+    margin: 0;
+    line-height: normal;
+  }
+  .vector-icon24 {
+    position: relative;
+    width: 14.56px;
+    height: 14.57px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .vector-icon24:active,
+  .vector-icon25:active {
+    animation: 1s ease 0s infinite normal none shadow-pop-tr;
+    opacity: 1;
+  }
+  .closebutton-div3 {
+    width: 303px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .upload-cv-div {
+    position: relative;
+    display: inline-block;
+    margin-top: -18px;
+  }
+  .close-and-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: var(--font-size-20xl);
+  }
+  .no-cv-has-been-attached {
+    position: relative;
+    display: inline-block;
+  }
+  .details-div2 {
+    width: 303px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--color-red);
+    font-family: var(--font-hind-siliguri);
+  }
+  .rectangle-input {
+    flex: 1;
+    align-self: stretch;
+    position: relative;
+    background-color: var(--color-gray-200);
+    border: 1px dashed var(--color-black);
+    box-sizing: border-box;
+  }
+  .uploadcv-div {
+    width: 303px;
+    height: 199px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-13xl);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  .vector-icon25 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .my-cv-box-div,
+  .options-div {
+    display: flex;
+    flex-direction: row;
+  }
+  .options-div {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-9xl);
+  }
+  .my-cv-box-div {
+    border-radius: var(--br-md);
+    background-color: var(--color-gray-100);
+    width: 303px;
+    height: 60px;
+    flex-shrink: 0;
+    padding: var(--padding-5xl) var(--padding-xs) var(--padding-5xl)
+      var(--padding-5xl);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cv-modal-item-div {
+    align-self: stretch;
+  }
+  .cv-modal-item-div,
+  .main-section-div11 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .button-primary-div1 {
+    border-radius: var(--br-4xl);
+    background-color: var(--color-gold-200);
+    width: 122px;
+    height: 27.04px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-5xl);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottomsection-div,
+  .upload-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .bottomsection-div {
+    align-self: stretch;
+    height: 82px;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    font-size: var(--font-size-12xl);
+  }
+  .upload-cv-modal-div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+    border-radius: var(--br-md);
+    background-color: var(--color-white);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-5xl);
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    color: var(--color-black);
+    font-family: var(--font-montserrat);
+  }
+  

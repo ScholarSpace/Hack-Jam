@@ -1,0 +1,104 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: red;
+}
+.sign-up-div {
+  position: relative;
+  font-size: var(--font-size-9xl);
+  font-family: var(--font-montserrat);
+  color: var(--color-black);
+  text-align: center;
+  display: inline-block;
+}
+.button-primary8 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2xl);
+  background-color: var(--color-gold-200);
+  align-self: stretch;
+  border-radius: var(--br-2xl);
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  opacity: 100;
+}
+.button-primary8.animate {
+  animation: 2s ease 0s 1 normal forwards fade-in;
+}
+.actions-div {
+  position: absolute;
+  width: calc(100% - 18px);
+  right: 9px;
+  bottom: 13px;
+  left: 9px;
+  height: 100.31px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-6xl);
+}
+.scholarspace-logo-1-icon,
+.vector-icon47 {
+  position: absolute;
+  top: calc(50% - 136.41px);
+  left: calc(50% - 164.6px);
+  width: 336.01px;
+  height: 355.72px;
+  opacity: 100;
+}
+.vector-icon47.animate {
+  animation: 1s ease 0s 1 normal forwards slide-in-top;
+}
+.scholarspace-logo-1-icon {
+  top: calc(50% - 360px);
+  left: calc(50% - 151px);
+  width: 301px;
+  height: 92px;
+  object-fit: cover;
+}
+.scholarspace-logo-1-icon.animate {
+  animation: 3s ease 0s 1 normal forwards slide-in-top;
+}
+.welcome-to-div {
+  position: absolute;
+  top: 16px;
+  left: calc(50% - 62px);
+  display: inline-block;
+  opacity: 100;
+}
+.welcome-to-div.animate {
+  animation: 3.5s ease 0s 1 normal forwards slide-in-top;
+}
+.welcome-main {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-7xl);
+  color: var(--color-black);
+  font-family: var(--font-montserrat);
+}

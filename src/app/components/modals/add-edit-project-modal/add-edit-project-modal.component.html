@@ -1,0 +1,49 @@
+  <body>
+    <div class="add-edit-project-modal-div">
+      <div class="add-edit-project-modal-div1">
+        <div class="title-and-close-div">
+          <div class="closebutton-div">
+            <img
+              class="vector-icon1"
+              alt=""
+              src="assets/public/vector16.svg"
+              id="popupvectorIcon"
+              [matDialogClose]="true"
+            />
+          </div>
+          <div class="addedit-project-div">Add/Edit Project</div>
+        </div>
+        <div class="main-section-div">
+          <input
+            class="project-title-input"
+            type="text"
+            placeholder="Title for your project"
+          />
+          <div class="profiles-div">
+            <div class="heading-div">
+              <div class="profiles-div1">Profiles</div>
+            </div>
+            <div class="profile-items-div">
+              <input class="generic-checkbox-input" type="checkbox" />
+            </div>
+          </div>
+          <textarea
+            class="description-textarea"
+            placeholder="Give your project a description"
+            rows="{8}"
+          ></textarea>
+          <div class="upload-file-div">
+            <input class="rectangle-input" type="file" />
+            <div class="files-permitted-png-jpeg-jp">
+              Files permitted: png, jpeg, jpg, docx, xlsx, pptx, txt.
+            </div>
+          </div>
+        </div>
+        <div class="bottom-section-div">
+          <button class="button-primary2">
+            <div class="edit-profile-div">Add</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>

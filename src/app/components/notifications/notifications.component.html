@@ -1,0 +1,447 @@
+  <body>
+    <div class="notifications-div">
+      <div class="notifications-scrollable-div">
+        <button class="notification-item-div">
+            <div class="notifications-item-button" id="notificationItemButton5">
+                <div class="icon-div2">
+                    <img class="vector-icon52" alt="" src="public/vector50.svg" />
+                  </div>
+                  <div class="details-div16">
+                    <div class="text-div2">Update 0.2.1 is here!</div>
+                  </div>
+                </div>
+              </button>
+        <button class="notification-item-button" id="notificationItemButton" (click)="openApprovedModal()">
+          <div class="icon-div2">
+            <img class="vector-icon52" alt="" src="public/vector51.svg" />
+          </div>
+          <div class="details-div16">
+            <div class="text-div3">Your application has been approved</div>
+          </div></button
+        ><button class="notification-item-button1" id="notificationItemButton1" (click)="openDeclinedModal()">
+          <div class="icon-div2">
+            <img class="vector-icon52" alt="" src="public/vector52.svg" />
+          </div>
+          <div class="details-div16">
+            <div class="text-div4">Your application has been declined</div>
+          </div></button
+        ><button class="notification-item-button" id="notificationItemButton2" (click)="openClosedModal()">
+          <img class="vector-icon55" alt="" src="public/vector53.svg" />
+          <div class="details-div16">
+            <div class="text-div3">
+              A job you have applied for has been closed
+            </div>
+          </div></button
+        ><button class="notification-item-button" id="notificationItemButton3" (click)="openBadgeModal()">
+          <div class="icon-div2">
+            <img class="vector-icon56" alt="" src="public/vector54.svg" />
+          </div>
+          <div class="details-div16">
+            <div class="text-div3">Great job! You’ve recieved a badge</div>
+          </div></button
+        ><button class="notification-item-button" id="notificationItemButton4" (click)="openInterviewModal()">
+          <div class="icon-div2">
+            <img class="vector-icon52" alt="" src="public/vector55.svg" />
+          </div>
+          <div class="details-div16">
+            <div class="text-div7">An interview has been scheduled</div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="approvedJobModalContainer"
+      class="popup-overlay"
+      style="display: none"
+    >
+      <div class="approved-job-modal-div">
+        <div class="title-and-close-div3">
+          <div class="title-div4">
+            <img class="vector-icon9" alt="" src="public/vector9.svg" />
+            <div class="title-div5">Application Approved</div>
+          </div>
+          <img
+            class="vector-icon10"
+            alt=""
+            src="public/vector10.svg"
+            id="popupvectorIcon"
+          />
+        </div>
+        <div class="main-section-div3">
+          <div class="details-div">
+            <div class="your-application-for-technica">
+              Your application for “Technical Writer needed” has been approved!
+            </div>
+          </div>
+          <div class="action-buttons-div">
+            <button class="reject-button">
+              <div class="reject-div">Reject</div></button
+            ><button class="accept-button">
+              <div class="accept-div">Accept</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="deniedJobModalContainer"
+      class="popup-overlay"
+      style="display: none"
+    >
+      <div class="denied-job-modal-div">
+        <div class="title-and-close-div4">
+          <div class="title-div6">
+            <img class="vector-icon11" alt="" src="public/vector11.svg" />
+            <div class="title-div7">Application Declined</div>
+          </div>
+          <img
+            class="vector-icon12"
+            alt=""
+            src="public/vector12.svg"
+            id="popupvectorIcon"
+          />
+        </div>
+        <div class="main-section-div4">
+          <div class="were-sorry-your-application">
+            <p class="were-sorry-your">We’re sorry, your application for</p>
+            <p class="technical-writer-needed">
+              “Technical Writer needed” has been declined
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="closedJobModalContainer"
+      class="popup-overlay"
+      style="display: none"
+    >
+      <div class="closed-job-modal-div">
+        <div class="title-and-close-div5">
+          <div class="title-div8">
+            <img class="vector-icon13" alt="" src="public/vector13.svg" />
+            <div class="title-div9">Application Closed</div>
+          </div>
+          <img
+            class="vector-icon14"
+            alt=""
+            src="public/vector14.svg"
+            id="popupvectorIcon"
+          />
+        </div>
+        <div class="main-section-div5">
+          <div class="were-sorry-your-application1">
+            <p class="were-sorry-your1">We’re sorry, your application for</p>
+            <p class="technical-writer-needed1">
+              “Technical Writer needed” has been closed
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="badgeRecievedPopupContainer"
+      class="popup-overlay"
+      style="display: none"
+    >
+      <div class="badge-recieved-popup-div">
+        <div class="title-and-close-div6">
+          <div class="title-div10">
+            <img class="vector-icon15" alt="" src="public/vector15.svg" />
+            <div class="your-hard-work-has-paid-off-y">
+              Good Job! You have recieved a badge
+            </div>
+          </div>
+          <img
+            class="vector-icon16"
+            alt=""
+            src="public/vector16.svg"
+            id="popupvectorIcon"
+          />
+        </div>
+        <div class="main-section-div6">
+          <div class="your-hard-work-has-paid-off-y">
+            <p class="your-hard-work">Your hard work has paid off! You have</p>
+            <p class="recieved-a-badge">recieved a badge for “Word 365”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="interviewModalContainer"
+      class="popup-overlay"
+      style="display: none"
+    >
+      <div class="interview-modal-div">
+        <div class="title-and-close-div7">
+          <div class="title-div12">
+            <div class="title-div13">An Interview has been setup!</div>
+          </div>
+          <img
+            class="vector-icon17"
+            alt=""
+            src="public/vector17.svg"
+            id="popupvectorIcon"
+          />
+        </div>
+        <div class="main-section-div7">
+          <div class="details-div1">
+            <div class="an-interview-for-technical-wr">
+              An interview for “Technical Writer needed” has been set up! Click
+              the button below to add it to your calendar.
+            </div>
+          </div>
+          <button class="action-button">
+            <div class="add-div">
+              <div class="accept-div1">Add to Calendar</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var popupvectorIcon = document.getElementById("popupvectorIcon");
+      if (popupvectorIcon) {
+        popupvectorIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupvectorIcon = document.getElementById("popupvectorIcon");
+      if (popupvectorIcon) {
+        popupvectorIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupvectorIcon = document.getElementById("popupvectorIcon");
+      if (popupvectorIcon) {
+        popupvectorIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupvectorIcon = document.getElementById("popupvectorIcon");
+      if (popupvectorIcon) {
+        popupvectorIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupvectorIcon = document.getElementById("popupvectorIcon");
+      if (popupvectorIcon) {
+        popupvectorIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var notificationItemButton = document.getElementById("notificationItemButton");
+      if (notificationItemButton) {
+        notificationItemButton.addEventListener("click", function () {
+          var popup = document.getElementById("approvedJobModalContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var notificationItemButton1 = document.getElementById(
+        "notificationItemButton1"
+      );
+      if (notificationItemButton1) {
+        notificationItemButton1.addEventListener("click", function () {
+          var popup = document.getElementById("deniedJobModalContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var notificationItemButton2 = document.getElementById(
+        "notificationItemButton2"
+      );
+      if (notificationItemButton2) {
+        notificationItemButton2.addEventListener("click", function () {
+          var popup = document.getElementById("closedJobModalContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var notificationItemButton3 = document.getElementById(
+        "notificationItemButton3"
+      );
+      if (notificationItemButton3) {
+        notificationItemButton3.addEventListener("click", function () {
+          var popup = document.getElementById("badgeRecievedPopupContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var notificationItemButton4 = document.getElementById(
+        "notificationItemButton4"
+      );
+      if (notificationItemButton4) {
+        notificationItemButton4.addEventListener("click", function () {
+          var popup = document.getElementById("interviewModalContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      </script>
+  </body>

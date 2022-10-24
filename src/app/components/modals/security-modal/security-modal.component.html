@@ -1,0 +1,26 @@
+  <body>
+    <div class="settings-page-div">
+      <div class="security-page-div">
+        <div class="title-and-close-div13">
+          <div class="security-div">Security</div>
+          <div class="closebutton-div7">
+            <img
+              class="vector-icon79"
+              alt=""
+              src="public/vector.svg"
+              id="vectorIcon"
+              [mat-dialog-close]="true"
+            />
+          </div>
+        </div>
+        <div class="main-section-div18">
+          <button class="change-pass-button" id="changePassButton"(click)="openChangePassModal()">
+            <div class="edit-profile-div19">Change Password</div></button
+          ><button class="delete-account-button" id="deleteAccountButton" (click)="openDeleteAccountModal()">
+            <div class="edit-profile-div19">Delete Account</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+

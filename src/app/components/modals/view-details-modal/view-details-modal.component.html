@@ -1,0 +1,79 @@
+  <body>
+    <div class="view-details-modal-div1">
+      <div class="view-details-modal-div2">
+        <div class="title-and-close-div24">
+          <div class="job-details-div1">Job Details</div>
+          <img
+            class="closebutton-icon2"
+            alt=""
+            src="public/closebutton@2x.png"
+            id="popupclosebuttonIcon"
+            [matDialogClose]="true"
+          />
+        </div>
+        <div class="main-section-div30">
+          <div class="title-div44">
+            <div class="technical-writer-needed8">Technical Writer needed</div>
+          </div>
+          <div class="meta-data-div7">
+            <div class="job-meta-data-div4">
+              <div class="job-meta-data-item-div12">
+                <img class="duration-icon4" alt="" src="public/duration.svg" />
+                <div class="job-details-div1">1—3 months</div>
+              </div>
+              <div class="job-meta-data-item-div12">
+                <img class="duration-icon4" alt="" src="public/vector94.svg" />
+                <div class="job-details-div1">Cape Town</div>
+              </div>
+              <div class="job-meta-data-item-div12">
+                <img class="duration-icon4" alt="" src="public/vector21.svg" />
+                <div class="job-details-div1">60/hr</div>
+              </div>
+            </div>
+          </div>
+          <div class="description-div4">
+            <div class="lorem-ipsum-dolor-sit-amet-co6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna.
+            </div>
+          </div>
+          <div class="posted-1-september-20224">Posted: 1 September 2022</div>
+        </div>
+        <div class="bottom-section-div16">
+          <button class="button-primary12" id="popupbuttonPrimary" (click)="openCoverLetterModal()">
+            <div class="edit-profile-div24">Apply</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var popupclosebuttonIcon = document.getElementById("popupclosebuttonIcon");
+      if (popupclosebuttonIcon) {
+        popupclosebuttonIcon.addEventListener("click", function (e) {
+          var popup = e.currentTarget.parentNode;
+          function isOverlay(node) {
+            return !!(
+              node &&
+              node.classList &&
+              node.classList.contains("popup-overlay")
+            );
+          }
+          while (popup && !isOverlay(popup)) {
+            popup = popup.parentNode;
+          }
+          if (isOverlay(popup)) {
+            popup.style.display = "none";
+          }
+        });
+      }
+      
+      var popupbuttonPrimary = document.getElementById("popupbuttonPrimary");
+      if (popupbuttonPrimary) {
+        popupbuttonPrimary.addEventListener("click", function (e) {
+          window.location.href = "./cover-letter-modal.html";
+        });
+      }
+      </script>
+  </body>
+

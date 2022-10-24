@@ -1,0 +1,27 @@
+  <body>
+    <div class="delete-account-modal-div">
+      <div class="delete-account-modal-div1">
+        <div class="title-and-close-div21">
+          <div class="delete-account-div">Delete Account</div>
+        </div>
+        <div class="main-section-div26">
+          <div class="are-you-sure">
+            Are you sure you want to delete your account? Please enter your
+            password for security reasons.
+          </div>
+          <input
+            class="password-input1"
+            type="password"
+            placeholder="Password"
+          />
+          <div class="yes-and-no-div">
+            <button class="yes-delete-button">
+              <div class="input-field-div">Yes</div></button
+            ><button class="yes-delete-button" id="popupnoDeleteButton" [mat-dialog-close]="true">
+              <div class="input-field-div1">No</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
