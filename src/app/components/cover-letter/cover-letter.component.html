@@ -33,7 +33,7 @@
               Choose your profile you wish to apply with
             </div>
             <select class="dropdown-box-select1">
-              <option value="1">Technical Writing</option>
+              <option *ngFor="let profile of this.profiles" [ngValue]="profile.profileTitle">{{profile.profileTitle}}</option>
             </select>
           </div>
         </div>

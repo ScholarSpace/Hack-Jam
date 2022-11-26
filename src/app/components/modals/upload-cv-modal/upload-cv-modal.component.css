@@ -169,4 +169,8 @@
     color: var(--color-black);
     font-family: var(--font-montserrat);
   }
+
+  .image-upload>input {
+    display: none;
+  }
   

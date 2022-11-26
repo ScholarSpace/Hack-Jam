@@ -24,10 +24,12 @@
             <div class="institute-div">Personal Details</div>
           </div>
           <div class="content-div1">
-            <input class="name-input1" type="text" placeholder="Name" /><input
+            <input class="name-input1" type="text" placeholder="Name" value="{{this.user.name}}"/>
+            <input
               class="name-input1"
               type="text"
               placeholder="Surname"
+              value="{{this.user.surname}}"
             />
           </div>
         </div>
@@ -37,13 +39,14 @@
             class="eduvos-input"
             type="text"
             placeholder="Name of your institution"
+            value="{{this.user.institution}}"
           />
         </div>
         <div class="education-div">
           <div class="institute-div">Qualification</div>
           <select class="eduvos-select">
-            <option value="Information Technology">
-              Information Technology
+            <option selected disabled hidden value="{{this.user.qualification}}">{{this.user.qualification}}</option>
+            <option *ngFor="let degree of this.service.degrees" value="{{degree}}">{{degree}}
             </option>
           </select>
         </div>
@@ -54,6 +57,7 @@
               class="johannesburg-input1"
               type="text"
               placeholder="Your location"
+              value="{{this.user.location}}"
             />
           </div>
         </div>

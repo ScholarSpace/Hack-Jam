@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +48,13 @@ import { NotifClosedModalComponent } from './components/modals/notif-closed-moda
 import { NotifInterviewModalComponent } from './components/modals/notif-interview-modal/notif-interview-modal.component';
 import { NotifBadgeModalComponent } from './components/modals/notif-badge-modal/notif-badge-modal.component';
 import { NotifDeclinedModalComponent } from './components/modals/notif-declined-modal/notif-declined-modal.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { DiscoverService } from './services/discover.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -96,6 +104,7 @@ import { NotifDeclinedModalComponent } from './components/modals/notif-declined-
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     MatDialogModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
@@ -103,9 +112,15 @@ import { NotifDeclinedModalComponent } from './components/modals/notif-declined-
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    provideFirebaseApp((() => initializeApp(environment.firebase))),
+    provideFirestore(() => getFirestore()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [
+    DiscoverService
+  ],
   entryComponents: [EditProfileStudentModalComponent],
   bootstrap: [AppComponent]
 })

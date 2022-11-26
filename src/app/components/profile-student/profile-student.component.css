@@ -693,6 +693,7 @@
     font-family: var(--font-hind-madurai);
   }
   .rating-div7 {
+    margin-top: 7px;
     flex-direction: column;
     justify-content: center;
   }
@@ -757,6 +758,11 @@
     align-items: flex-start;
     justify-content: flex-start;
   }
+
+  .badge-container-div3{
+    margin-top: 7px;
+  }
+
   .badge-container-div3,
   .badges-div5 {
     display: flex;

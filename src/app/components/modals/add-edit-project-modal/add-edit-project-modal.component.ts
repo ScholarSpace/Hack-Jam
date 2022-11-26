@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileStudentComponent } from '../../profile-student/profile-student.component';
 
 @Component({
   selector: 'app-add-edit-project-modal',
@@ -10,6 +11,7 @@ export class AddEditProjectModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

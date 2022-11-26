@@ -13,29 +13,29 @@
           <div class="points-and-edits1">
             <div class="points-div2">
               <img class="group-icon2" alt="" src="assets/public/group2.svg" />
-              <div class="number-div2">5</div>
+              <div class="number-div2">{{this.user.points}}</div>
               <div></div>
             </div>
-            <button class="button-secondary6" id="buttonSecondary" (click)="openEditProfileModal()">
+            <button class="button-secondary6" id="buttonSecondary" (click)="openEditProfileModal(this.user)">
               <div class="edit-profile-div18">Edit Profile</div>
             </button>
           </div>
         </div>
         <div class="profile-items-div4">
-          <div class="name-div2"><b class="users-name-b2">Mary Jane</b></div>
+          <div class="name-div2"><b class="users-name-b2">{{this.user.name}} {{this.user.surname}}</b></div>
           <div class="meta-data-div6">
             <div class="meta-data-student-div1">
               <div class="meta-item-1-div1">
                 <img class="vector-icon66" alt="" src="assets/public/vector63.svg" />
-                <div class="eduvos-2021-2023-div1">Eduvos (2021-2023)</div>
+                <div class="eduvos-2021-2023-div1">{{this.user.institution}}</div>
               </div>
               <div class="meta-item-2-div1">
                 <img class="vector-icon66" alt="" src="assets/public/vector64.svg" />
-                <div class="number-div2">Business Management</div>
+                <div class="number-div2">{{this.user.qualification}}</div>
               </div>
               <div class="meta-item-1-div1">
                 <img class="vector-icon68" alt="" src="assets/public/vector65.svg" />
-                <div class="johannesburg-div2">Johannesburg</div>
+                <div class="johannesburg-div2">{{this.user.location}}</div>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@
             <div class="about-me-box-div4">
               <div class="about-me-box-div5">
                 <div class="frame-div9" data-animate-on-scroll>
-                  <div class="number-div2">About me</div>
+                  <div class="number-div2">About Me</div>
                   <button class="edit-1-button">
                     <img
                       class="vector-icon69"
@@ -61,14 +61,14 @@
                   class="desc-textarea1"
                   placeholder="Say something about yourself"
                   rows="{5}"
-                ></textarea>
+                >{{this.user.aboutMe}}</textarea>
               </div>
             </div>
             <div class="interests-div3">
               <div class="interests-component-div1">
                 <div class="interests-div4">
                   <div class="number-div2">Interests</div>
-                  <button class="edit-1-button1" id="edit1Button1">
+                  <button class="edit-1-button1" id="edit1Button1" (click)="openInterests()">
                     <img
                       class="vector-icon69"
                       alt=""
@@ -81,17 +81,8 @@
                   </button>
                 </div>
                 <div class="interest-bubbles-div1">
-                  <div class="interests-bubble-div4">
-                    <div class="technical-writing-div6">Technical writing</div>
-                  </div>
-                  <div class="interests-bubble-div4">
-                    <div class="technical-writing-div6">JavaScript</div>
-                  </div>
-                  <div class="interests-bubble-div4">
-                    <div class="technical-writing-div6">Web development</div>
-                  </div>
-                  <div class="interests-bubble-div4">
-                    <div class="technical-writing-div6">Python</div>
+                  <div class="interests-bubble-div4" *ngFor="let interest of this.user.interests">
+                    <div class="technical-writing-div6">{{interest}}</div>
                   </div>
                 </div>
               </div>
@@ -117,6 +108,7 @@
                       class="title-input"
                       type="text"
                       placeholder="General"
+                      [(ngModel)]="this.activeProfile.profileTitle"
                     /><button class="frame-button">
                       <img
                         class="vector-icon73"
@@ -132,15 +124,15 @@
                       />
                     </div>
                   </div>
-                  <select class="dropdown-box-select">
-                    <option value="Technical Writing">Technical Writing</option>
-                    <option value="General">General</option>
+                  <select class="dropdown-box-select" [(ngModel)]="selectModel" (change)="changeProfile()">
+                    <option *ngFor="let profile of this.profiles" [ngValue]="profile.profileTitle">{{profile.profileTitle}}</option>
                   </select>
                 </div>
                 <input
                   class="desc-input"
                   type="text"
                   placeholder="Your profile description goes here"
+                  [(ngModel)]="this.activeProfile.profileDesc"
                 />
                 <div class="project-collection-div2">
                   <div class="projects-box-div1">
@@ -156,12 +148,12 @@
                     </div>
                     <div class="project-collection-div3">
                       <div class="project-card-div4">
-                        <div class="project-card-div5">
+                        <div class="project-card-div5" *ngFor="let project of this.activeProfile.projectTitle" >
                           <div class="frame-div13">
                             <div class="project-name-and-options-div2">
                               <div class="project-name-div2">
                                 <div class="number-div2">
-                                  Blog Writing Project
+                                  {{project}}
                                 </div>
                               </div>
                               <div class="project-options-div2">
@@ -200,36 +192,23 @@
                   <div class="users-name-b2">Ratings</div>
                 </div>
                 <div class="ratings-div8">
-                  <div class="rating-div7">
-                    <div class="project-options-div2">
-                      <img
-                        class="star-1-icon6"
-                        alt=""
-                        src="assets/public/star-16.svg"
-                      /><img
-                        class="star-1-icon6"
-                        alt=""
-                        src="assets/public/star-36.svg"
-                      /><img
-                        class="star-1-icon6"
-                        alt=""
-                        src="assets/public/star-46.svg"
-                      /><img
-                        class="star-1-icon6"
-                        alt=""
-                        src="assets/public/star-56.svg"
-                      /><img
-                        class="star-1-icon6"
-                        alt=""
-                        src="assets/public/star-26.svg"
-                      />
-                    </div>
-                    <div class="rater-div6">
-                      <div class="googlecom-div6">—Google.com</div>
-                    </div>
-                    <div class="comment-div7">
-                      <div class="users-name-b2">
-                        Lorem ipsum dolor sit amet consectetur.
+                  <div *ngIf="this.reviewsLoaded | async">
+                    <div class="rating-div7" *ngFor="let review of this.reviews">
+                      <div class="project-options-div2">
+                        <img
+                          class="star-1-icon6"
+                          alt=""
+                          src="assets/public/star-16.svg"
+                          *ngFor="let star of this.counter(review.rating)"
+                        />
+                      </div>
+                      <div class="rater-div6">
+                        <div class="googlecom-div6"><b>—{{review.recName}}</b></div>
+                      </div>
+                      <div class="comment-div7">
+                        <div class="users-name-b2">
+                          {{review.comment}}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -242,15 +221,15 @@
                   <div class="number-div2">Badges</div>
                 </div>
                 <div class="badges-div5">
-                  <div class="badge-container-div3">
+                  <div class="badge-container-div3" *ngFor="let badge of this.completedCourses">
                     <img
                       class="badge-1-icon3"
                       alt=""
                       src="assets/public/badge-13.svg"
                     />
                     <div class="details-div23">
-                      <div class="word-365-div3">Word 365</div>
-                      <div class="scholarspace-div3">ScholarSpace</div>
+                      <div class="word-365-div3">{{badge.badgeTitle}}</div>
+                      <div class="scholarspace-div3">{{badge.badgeSupplier}}</div>
                     </div>
                   </div>
                 </div>

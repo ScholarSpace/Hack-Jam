@@ -2,7 +2,7 @@
     <div class="tips-page-div">
       <div class="tips-scrollable-div">
         <div class="frame-div">
-          <img class="tip-item-icon" alt="" src="assets/public/tipitem.svg" />
+          <div class="tip-item-icon" *ngFor="let tip of this.tips">{{tip.tipsTitle}}</div>
         </div>
       </div>
     </div>

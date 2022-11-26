@@ -37,28 +37,30 @@
     font-family: var(--font-hind-madurai);
     color: var(--color-black);
     text-align: center;
+    float: left;
+
   }
   .interest-bubble-item-button {
     cursor: pointer;
     border: 0;
     padding: var(--padding-5xl);
     background-color: var(--color-gray-100);
-    position: absolute;
-    top: 0;
-    left: 134px;
     border-radius: var(--br-md);
-    width: 61.24px;
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     box-sizing: border-box;
     align-items: flex-start;
     justify-content: flex-start;
+    overflow: auto;
   }
   .fields-div {
+    display: flex;
+    flex-wrap: wrap;
     align-self: stretch;
     position: relative;
-    height: 40px;
     flex-shrink: 0;
+    gap : 5px;
+    justify-content: center;
   }
   .interest-bubble-div,
   .interests-div6 {
@@ -70,6 +72,7 @@
   .interest-bubble-div {
     justify-content: center;
     gap: 1.68px;
+    margin-bottom: 10px;
   }
   .interests-div6 {
     flex: 1;
@@ -123,8 +126,10 @@
   }
   .back-button-div {
     position: absolute;
+    margin-top: 15px;
     transform: translate(0, -40%);
     bottom: 1px;
+    top: 200vh;
     left: calc(50% - 180px);
     flex-direction: column;
     padding: var(--padding-5xl);
@@ -187,5 +192,9 @@
     font-size: var(--font-size-5xl);
     color: var(--color-black);
     font-family: var(--font-hind-siliguri);
+  }
+
+  .selected {
+    color: #ffe278;
   }
   

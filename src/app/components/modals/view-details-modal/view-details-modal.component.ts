@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CoverLetterComponent } from '../../cover-letter/cover-letter.component';
 
 @Component({
@@ -9,13 +9,13 @@ import { CoverLetterComponent } from '../../cover-letter/cover-letter.component'
 })
 export class ViewDetailsModalComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public job:any, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  openCoverLetterModal(){
-    this.dialog.open(CoverLetterComponent);
+  openCoverLetterModal(job: any){
+    this.dialog.open(CoverLetterComponent, {data: job});
   }
 
 }

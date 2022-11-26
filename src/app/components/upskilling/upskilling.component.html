@@ -4,8 +4,8 @@
         <div class="topics-div">
           <div class="topics-div1">
             <div class="topic-bubble-collection-div">              
-              <button class="topic-bubble-item-button" *ngFor="let topic of topics" (click)="setOpenTopic(topic.name)">
-                <div class="topic-bubble-div">{{topic.name}}</div>
+              <button class="topic-bubble-item-button" *ngFor="let topic of this.topics" (click)="setOpenTopic(topic)">
+                <div class="topic-bubble-div" (click)="setOpenTopic(topic)">{{topic}}</div>
               </button>
             </div>
           </div>
@@ -16,25 +16,26 @@
             <div
               class="course-card-complete-closed-div"
               id="courseCardCompleteOpenContainer"
-              *ngFor="let course of openTopic.courses"
+              *ngFor="let course of openTopicCourses"
             >
               <div class="icon-div">
-                <img class="word-366-icon" alt="" src="assets/public/word-3661.svg" />
+                <img class="word-366-icon" alt="" src="assets/public/word-3661.svg"/>
               </div>
               <div class="details-div15">
                 <div class="details-div14">
-                  <div class="title-div25">{{course.name}}</div>
-                  <div *ngIf="course.completed">
-                    <img class="vector-icon50" alt="" src="assets/public/vector48.svg"/>
+                  <div class="title-div25">{{course.courseTitle}}</div>
+                  <div *ngIf="course">
+                    <img class="vector-icon50" alt="" src="assets/public/vector48.svg" *ngIf="stringCompletedCourses.includes(course.id)"/>
                   </div>
                 </div>
                 <div class="desc-div7">
-                  {{course.desc}}
+                  {{course.courseDesc}}
                 </div>
                 <div class="actions-div">
                   <button class="button-secondary4">
-                    <div class="edit-profile-div16">Review</div></button
-                  ><button class="button-secondary5" [class.inactive-button]="course.completed" [disabled]="(course.completed) ? 'disabled': ''">
+                    <a target="_blank"><div class="edit-profile-div16">Review</div></a>
+                   </button
+                  ><button class="button-secondary5"[class.inactive-button]="stringCompletedCourses.includes(course.id)" [disabled]="(stringCompletedCourses.includes(course.id)) ? 'disabled': ''">
                     <div class="edit-profile-div16">Take Quiz</div>
                   </button>
                 </div>
@@ -44,24 +45,4 @@
         </div>
       </div>
     </div>
-
-    <script>
-      var courseCardCompleteClosedContainer = document.getElementById(
-        "courseCardCompleteClosedContainer"
-      );
-      if (courseCardCompleteClosedContainer) {
-        courseCardCompleteClosedContainer.addEventListener("click", function () {
-          //TODO: Open course card
-        });
-      }
-      
-      var courseCardCompleteOpenContainer = document.getElementById(
-        "courseCardCompleteOpenContainer"
-      );
-      if (courseCardCompleteOpenContainer) {
-        courseCardCompleteOpenContainer.addEventListener("click", function () {
-          //TODO: Close course card
-        });
-      }
-      </script>
   </body>

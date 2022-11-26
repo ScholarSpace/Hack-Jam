@@ -3,15 +3,28 @@ body {
     line-height: normal;
   }
   .tip-item-icon {
+    font-family: var(--font-hind-madurai);
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-overflow: clip;
+    align-items: center;
     position: relative;
-    border-radius: var(--br-md);
-    width: 129px;
-    height: 130px;
+    background-color: #ffd12b;
+    width: 260px;
+    height: 260px;
     flex-shrink: 0;
+    border-radius: 43px;
+    background: rgb(255,226,120);
+    background: radial-gradient(circle, rgba(255,226,120,1) 0%, rgba(255,209,43,1) 100%);
   }
   .frame-div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     align-items: flex-start;
     justify-content: flex-start;
   }
