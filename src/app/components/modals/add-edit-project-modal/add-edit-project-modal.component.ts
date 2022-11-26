@@ -11,7 +11,7 @@ export class AddEditProjectModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
 }
