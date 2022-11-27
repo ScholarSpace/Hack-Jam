@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MainAppService } from 'src/app/services/main-app.service';
 
 @Component({
   selector: 'app-sign-up-student',
@@ -7,8 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up-student.component.css']
 })
 export class SignUpStudentComponent implements OnInit {
+  degrees: string[];
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private service:  MainAppService) {
+    this.degrees = service.degrees;
+  }
 
   ngOnInit(): void {
   }

@@ -1,7 +1,8 @@
 body {
     margin: 0;
     line-height: normal;
-  }
+    height: 45px;
+}
   .upskill-icon {
     position: relative;
     width: 20.3px;
@@ -51,5 +52,6 @@ body {
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
   }
   

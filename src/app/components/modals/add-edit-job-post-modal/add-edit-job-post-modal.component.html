@@ -41,13 +41,16 @@
           <div class="title-div45">
             <div class="addedit-job-post1">Industry</div>
             <select class="component-select6">
-              <option value="1">Information Technology</option>
+              <option *ngFor="let industry of this.industries" value='{{industry}}'>{{industry}}</option>
             </select>
           </div>
           <div class="title-div45">
             <div class="addedit-job-post1">Job Type</div>
             <select class="component-select6">
               <option value="1">Internship</option>
+              <option value="1">Part-time</option>
+              <option value="1">Full-time</option>
+              <option value="1">Vacation Work</option>
             </select>
           </div>
         </div>

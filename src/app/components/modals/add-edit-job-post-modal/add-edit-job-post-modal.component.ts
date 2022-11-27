@@ -7,6 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEditJobPostModalComponent implements OnInit {
 
+  industries = [
+    'Financial services',
+    'Humanities',
+    'Humanities and Marketing',
+    'Sciences',
+    'Biology and Life Sciences',
+    'Medicine',
+    'Manufacturing',
+    'Law Enforcement',
+    'Media/Entertainment',
+    'Disaster management services',
+    'Art',
+    'Technology',
+    'Military',
+    'Travel (Air)',
+    'Automobile',
+    'Oceanic',
+    'Health Care services',
+    'Resources',
+    'Tourism',
+    'Utilities',
+    'Waste'
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

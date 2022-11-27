@@ -1,6 +1,7 @@
 body {
     margin: 0;
     line-height: normal;
+    height: 45px
   }
   .chat-icon1 {
     position: relative;
@@ -46,5 +47,6 @@ body {
     box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
   }
   

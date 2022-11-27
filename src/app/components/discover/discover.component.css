@@ -27,6 +27,7 @@
     bottom: 0;
     right: 0;
   }
+
   .generic-input-field1 {
     border: 0;
     background-color: var(--color-gray-100);
@@ -628,3 +629,6 @@
     font-family: var(--font-montserrat);
   }
   
+  .red {
+    background-color: red;
+  }

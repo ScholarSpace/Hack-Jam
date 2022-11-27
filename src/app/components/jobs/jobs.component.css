@@ -72,7 +72,7 @@
   .icon-button1 {
     border: 0;
     padding: var(--padding-9xl);
-    background-color: var(--color-gold-200);
+    background-color: var(--color-gray-100);
     border-radius: var(--br-6xl);
     flex-direction: row;
     box-sizing: border-box;
@@ -104,7 +104,7 @@
   .categories-div {
     align-self: stretch;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .title-div23 {
     align-self: stretch;
@@ -211,7 +211,7 @@
     left: 0;
   }
   .job-scrollable-div {
-    top: 50px;
+    top: 0px;
     display: flex;
     flex-direction: column;
     padding: var(--padding-5xl);
@@ -233,7 +233,7 @@
     border: 0;
     padding: 0;
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     right: 6px;
     bottom: 51px;
     width: 53px;
@@ -406,4 +406,8 @@
     font-size: var(--font-size-20xl);
     color: var(--color-black);
     font-family: var(--font-montserrat);
+  }
+
+  .selected {
+    background-color: var(--color-gold-200);
   }

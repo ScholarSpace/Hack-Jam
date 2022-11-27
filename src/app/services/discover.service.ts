@@ -19,7 +19,7 @@ export class DiscoverService {
 
   getJobs(): Observable<Job[]>{
     let jobsRef = collection(this.afs, 'jobDetails');
-    const q = query(jobsRef, where('active?', '==', 'active'));
+    const q = query(jobsRef, where('active?', '==', 'posted'));
     return collectionData(q, {idField: 'id'}) as Observable<Job[]>
   }
 
@@ -31,18 +31,15 @@ export class DiscoverService {
 }
 
 export interface Job {
-  id: string,
   status : string;
-  hiredStaff : string[];
+  id: string,
   industry : string;
   jobDesc : string;
   jobDuration : string;
   jobLocation : string;
   jobPayRate : number;
   jobPostDate : Date;
-  jobProposals : string[];
   jobTitle : string;
   jobType : string;
   recID : string;
-  shortlist : string[];
 }

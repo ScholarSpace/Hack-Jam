@@ -3,32 +3,32 @@
       <div class="job-scrollable-div">
         <div class="categories-div">
           <div class="posted-div" id="postedContainer">
-            <button class="icon-button">
+            <button class="icon-button"  [class.selected]="postedActive" (click)="changeJobType('posted')">
               <img class="vector-icon44" alt="" src="assets/public/vector42.svg" />
             </button>
             <div class="posted-div1">Posted</div>
           </div>
           <div class="active-div">
-            <button class="icon-button1">
+            <button class="icon-button1" [class.selected]="activeActive" (click)="changeJobType('active')">
               <img class="vector-icon44" alt="" src="assets/public/vector43.svg" />
             </button>
             <div class="posted-div1">Active</div>
           </div>
           <div class="active-div">
-            <button class="icon-button2" id="iconButton2">
+            <button class="icon-button2" id="iconButton2"  [class.selected]="closedActive" (click)="changeJobType('closed')">
               <img class="vector-icon44" alt="" src="assets/public/vector44.svg" />
             </button>
             <div class="posted-div1">Closed</div>
           </div>
         </div>
         <div class="jobs-div">
-          <div class="title-div23">Active Jobs</div>
-          <div class="recruiter-job-card-div" id="recruiterJobCardContainer" routerLink="view-details/1">
+          <div class="title-div23">{{this.jobString}}</div>
+          <div class="recruiter-job-card-div" id="recruiterJobCardContainer" *ngFor="let job of this.jobs" (click)="setSelectedJob(job)" routerLink="view-details/{{job.id}}">
             <div class="main-section-div16">
               <div class="details-div13">
                 <div class="title-div24">
                   <div class="technical-writer-needed4">
-                    Technical Writer needed
+                    {{job.jobTitle}}
                   </div>
                 </div>
                 <div class="meta-data-div4">
@@ -39,7 +39,7 @@
                         alt=""
                         src="assets/public/duration2.svg"
                       />
-                      <div class="posted-div1">1—3 months</div>
+                      <div class="posted-div1">{{job.jobDuration}}</div>
                     </div>
                     <div class="job-meta-data-item-div6">
                       <img
@@ -47,7 +47,7 @@
                         alt=""
                         src="assets/public/vector45.svg"
                       />
-                      <div class="posted-div1">Cape Town</div>
+                      <div class="posted-div1">{{job.jobLocation}}</div>
                     </div>
                     <div class="job-meta-data-item-div6">
                       <img
@@ -55,20 +55,19 @@
                         alt=""
                         src="assets/public/vector46.svg"
                       />
-                      <div class="posted-div1">60/hr</div>
+                      <div class="posted-div1">{{job.jobPayRate}}/hr</div>
                     </div>
                   </div>
                 </div>
                 <div class="description-div2">
                   <div class="title-div23">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                    et massa mi. Aliquam in hendrerit urna.
+                    {{job.jobDesc}}
                   </div>
                 </div>
               </div>
             </div>
             <div class="bottom-section-div10">
-              <div class="posted-div1">Posted: 1 September 2022</div>
+              <div class="posted-div1">Posted: {{job.jobPostDate}}</div>
             </div>
           </div>
         </div>

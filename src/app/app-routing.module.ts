@@ -7,6 +7,7 @@ import { NotificationsComponent } from './components/notifications/notifications
 import { ProfileRecruitersComponent } from './components/profile-recruiters/profile-recruiters.component';
 import { ProfileStudentComponent } from './components/profile-student/profile-student.component';
 import { RolesComponent } from './components/roles/roles.component';
+import { ShortlistComponent } from './components/shortlist/shortlist.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpRecruiterComponent } from './components/sign-up-recruiter/sign-up-recruiter.component';
 import { SignUpStudentComponent } from './components/sign-up-student/sign-up-student.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
       {path: 'discover', component: DiscoverComponent},
       {path: 'jobs', component: JobsComponent},
       {path: 'jobs/view-details/:jobId', component: ViewDetailsComponent},
+      {path: 'jobs/view-details/:jobId/shortlist', component: ShortlistComponent},
       {path: 'recruiter-profile', component: ProfileRecruitersComponent},
     ]
 },

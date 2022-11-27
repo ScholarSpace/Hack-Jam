@@ -11,17 +11,17 @@
           <div class="social-media-and-edit-div">
             <div class="social-media-div2">
               <div class="icons-div">
-                <a class="facebook" target="_blank"
+                <a class="facebook" target="_blank" href="{{this.links[0]}}"
                   ><img
                     class="facebook-1-icon1"
                     alt=""
                     src="assets/public/facebook-11@2x.png" /></a
-                ><a class="facebook" target="_blank"
+                ><a class="facebook" target="_blank" href="{{this.links[1]}}"
                   ><img
                     class="instagram-1-icon1"
                     alt=""
-                    src="assets/public/instagram-11@2x.png" /></a
-                ><a class="facebook" target="_blank"
+                    src="assets/public/instagram-11@2x.png"/></a
+                ><a class="facebook" target="_blank" href="{{this.links[2]}}"
                   ><img
                     class="linkedin-1-icon1"
                     alt=""
@@ -33,20 +33,20 @@
               <div class="edit-profile-div12">Edit Profile</div>
             </button>
           </div>
-          <div class="name-div"><b class="users-name-b">Eduvos</b></div>
+          <div class="name-div"><b class="users-name-b">{{this.rec.companyName}}</b></div>
           <div class="meta-data-div1">
             <div class="meta-data-recruiter-div">
               <div class="established-div">
                 <img
                   class="briefcase-1-icon"
                   alt=""
-                  src="assets/public/briefcase-1@2x.png"
+                  src="assets/public/briefcase.png"
                 />
-                <div class="since-2010-div">Since 2010</div>
+                <div class="since-2010-div">Since {{this.rec.estDate}}</div>
               </div>
               <div class="location-div8">
                 <img class="vector-icon34" alt="" src="assets/public/vector33.svg" />
-                <div class="since-2010-div">Johannesburg</div>
+                <div class="since-2010-div">{{this.rec.location}}</div>
               </div>
             </div>
           </div>
@@ -68,7 +68,7 @@
                   class="desc-textarea"
                   placeholder="Say something about yourself"
                   rows="{5}"
-                ></textarea>
+                >We strive to cultivate professional writers and produce high quality work.</textarea>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
                   <div class="users-name-b">Ratings</div>
                 </div>
                 <div class="ratings-div2">
-                  <div class="rating-div1">
+                  <div class="rating-div1" *ngFor="let review of this.reviews">
                     <div class="stars-div1">
                       <img
                         class="star-1-icon"
@@ -104,77 +104,11 @@
                       />
                     </div>
                     <div class="rater-div">
-                      <div class="googlecom-div">—Google.com</div>
+                      <div class="googlecom-div"><b>—{{review.recName}}</b></div>
                     </div>
                     <div class="comment-div1">
                       <div class="users-name-b">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="rating-div1">
-                    <div class="stars-div1">
-                      <img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-11.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-31.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-41.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-51.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-21.svg"
-                      />
-                    </div>
-                    <div class="rater-div">
-                      <div class="googlecom-div">—Google.com</div>
-                    </div>
-                    <div class="comment-div1">
-                      <div class="users-name-b">
-                        Lorem ipsum dolor sit amet consectetur.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="rating-div1">
-                    <div class="stars-div1">
-                      <img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-12.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-32.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-42.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-52.svg"
-                      /><img
-                        class="star-1-icon"
-                        alt=""
-                        src="assets/public/star-22.svg"
-                      />
-                    </div>
-                    <div class="rater-div">
-                      <div class="googlecom-div">—Google.com</div>
-                    </div>
-                    <div class="comment-div1">
-                      <div class="users-name-b">
-                        Lorem ipsum dolor sit amet consectetur.
+                        {{review.comment}}
                       </div>
                     </div>
                   </div>

@@ -125,11 +125,10 @@
     opacity: 1;
   }
   .back-button-div {
-    position: absolute;
+    position: fixed;
     margin-top: 15px;
     transform: translate(0, -40%);
-    bottom: 1px;
-    top: 200vh;
+    bottom: 10px;
     left: calc(50% - 180px);
     flex-direction: column;
     padding: var(--padding-5xl);

@@ -70,20 +70,23 @@ body {
     justify-content: flex-start;
   }
   .profile-card-shortlist-div {
-    align-self: stretch;
+    width: 100%;
     border-radius: var(--br-md);
     background-color: var(--color-gray-100);
     flex-direction: row;
     align-items: center;
+    float: left;
   }
   .applicant-div {
     position: absolute;
-    width: 105.88%;
+    width: 100%;
     top: 0.49px;
     right: -2.94%;
     left: -2.94%;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
   .shortlist-scrollable-div {
     align-self: stretch;
@@ -146,6 +149,12 @@ body {
     justify-content: flex-start;
     font-size: var(--font-size-18xl);
   }
+
+  .buttons {
+    display: flex;
+    gap: 5px;
+  }
+
   .shortlist-div {
     position: relative;
     background-color: var(--color-white);

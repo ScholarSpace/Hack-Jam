@@ -284,16 +284,17 @@
     box-sizing: border-box;
   }
   .profile-card-posted-div {
-    align-self: stretch;
+    width: 100%;
     border-radius: var(--br-md);
     background-color: var(--color-gray-100);
   }
   .applicant-div1 {
     position: absolute;
-    width: 105.88%;
+    justify-content: left;
+    width: 100%;
     top: 0.49px;
     right: -2.94%;
-    left: -2.94%;
+    left: 0%;
   }
   .applicants-scrollable-div {
     align-self: stretch;

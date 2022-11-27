@@ -10,6 +10,7 @@
               placeholder="Email Address"
               required
               autofocus
+              [(ngModel)] = 'this.email'
             /><input
               class="e-mail-input"
               type="password"
@@ -18,7 +19,7 @@
           </div>
         </div>
         <div class="bottom-section-div7">
-          <button class="button-primary7" id="buttonPrimary">
+          <button class="button-primary7" id="buttonPrimary" (click)="openProfile()">
             <div class="edit-profile-div11">Sign In</div>
           </button>
         </div>

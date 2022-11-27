@@ -8,6 +8,7 @@ import { Job } from './discover.service';
   providedIn: 'root'
 })
 export class MainAppService {
+  recruiter: Recruiter;
 
   constructor(private afs: AngularFirestore, private db: Firestore) {
   }
@@ -40,6 +41,36 @@ export class MainAppService {
     let savedJobsRef = collection(this.db, 'jobDetails');
     const q = query(savedJobsRef, where('id', 'in', jobs));
     return collectionData(q, {idField: 'id'}) as Observable<Job[]>;
+  }
+
+  getRecruiter(){
+    const collection = this.afs.collection<Recruiter>('recruiters', ref => ref.where('id', '==', 'wVqOmcfOOBgnW1YQyUNC'));
+    const user = collection.valueChanges()
+    .pipe(
+      map(users => {
+        const singleUser = users[0];
+        return singleUser
+      })
+    )
+    return user
+  }
+
+  getRecruiterReviews(){
+    let reviewIDs = collection(this.db, 'reviews');
+    const q = query(reviewIDs, where('for', '==', 'wVqOmcfOOBgnW1YQyUNC'));
+    return collectionData(q) as Observable<Review[]>;
+  }
+
+  getJobs(type: string): Observable<Job[]>{
+    let jobsRef = collection(this.db, 'jobDetails');
+    const q = query(jobsRef, where('active?', '==', type));
+    return collectionData(q, {idField: 'id'}) as Observable<Job[]>
+  }
+
+  getSingleJob(id: string){
+    let jobsRef = collection(this.db, 'jobDetails');
+    const q = query(jobsRef, where('id', '==', id));
+    return collectionData(q, {idField: 'id'}) as Observable<Job[]>
   }
 
   degrees = ['BSc in Media studies',
@@ -141,4 +172,17 @@ export interface Review {
   recName: string,
   studentID: string,
   user: string
+}
+
+export interface Recruiter{
+  companyName: string,
+  companyDesc: string,
+  email: string,
+  estDate: string,
+  location: string,
+  password: string,
+  recType: string,
+  reviewID: string[],
+  socialMedia: string[],
+  verified: boolean
 }

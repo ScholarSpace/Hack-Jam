@@ -19,20 +19,18 @@ export class DiscoverComponent implements OnInit {
              payRateTo: 100,
              duration: '1-3 months',
              jobType: 'Full-time'}
-  savedJobs: Job[] = [{id: '',
-    status : '',
-    hiredStaff : [''],
+  savedJobs: Job[] = [{status : '',
+    id: '',
     industry : '',
     jobDesc : '',
     jobDuration : '',
     jobLocation : '',
     jobPayRate : 0,
     jobPostDate : new Date('2000-01-01'),
-    jobProposals : [''],
     jobTitle : '',
     jobType : '',
-    recID : '',
-    shortlist : ['']}];
+    recID : ''
+  }];
   saveState = 'vector57.svg';
 
   constructor(private dialog: MatDialog, private service: DiscoverService,private mainservice: MainAppService) { }

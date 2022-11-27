@@ -55,6 +55,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { DiscoverService } from './services/discover.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ChatRecruiterComponent } from './components/chat-recruiter/chat-recruiter.component';
+import { ChatStudentComponent } from './components/chat-student/chat-student.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +101,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     NotifClosedModalComponent,
     NotifInterviewModalComponent,
     NotifBadgeModalComponent,
-    NotifDeclinedModalComponent
+    NotifDeclinedModalComponent,
+    ChatRecruiterComponent,
+    ChatStudentComponent
   ],
   imports: [
     BrowserModule,
@@ -119,7 +123,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     AngularFirestoreModule
   ],
   providers: [
-    DiscoverService
+    DiscoverService,
+    ProfileRecruitersComponent,
+    JobsComponent
   ],
   entryComponents: [EditProfileStudentModalComponent],
   bootstrap: [AppComponent]

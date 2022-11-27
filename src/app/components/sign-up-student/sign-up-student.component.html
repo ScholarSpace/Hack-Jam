@@ -3,7 +3,7 @@
       <div class="frame-div">
         <div class="top-section-div">
           <button class="back-button" id="backButton" routerLink="/roles">
-            <img class="vector-icon1" alt="" src="assets/public/vector1.svg" />
+            <img class="vector-icon1" alt="" src="assets/public/vector32.svg" />
           </button>
           <div class="sign-up-div2">Sign Up</div>
         </div>
@@ -34,7 +34,8 @@
                     placeholder="Surname"
                     required
                   /><select class="name-select" required>
-                    <option value="Qualification">Qualification</option>
+                    <option value="Choose" hidden selected>Choose Degree</option>
+                    <option *ngFor="let degree of this.degrees" value="{{degree}}">{{degree}}</option>
                   </select>
                 </div>
                 <div class="personal-div">

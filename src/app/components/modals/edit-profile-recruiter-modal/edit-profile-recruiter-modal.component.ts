@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Recruiter } from 'src/app/services/main-app.service';
+import { ProfileRecruitersComponent } from '../../profile-recruiters/profile-recruiters.component';
 
 @Component({
   selector: 'app-edit-profile-recruiter-modal',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProfileRecruiterModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public user:Recruiter, public rec: ProfileRecruitersComponent) { }
 
   ngOnInit(): void {
   }
